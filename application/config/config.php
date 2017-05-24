@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '';
+$config['base_url'] = 'http://music-ci.dev/';
 
 /*
 |--------------------------------------------------------------------------
@@ -89,9 +89,11 @@ $config['language']	= 'english';
 | See http://php.net/htmlspecialchars for a list of supported charsets.
 |
 */
+$config["upload_path"] =  APPPATH.'/uploads/';
 $config['charset'] = 'UTF-8';
 
 /*
+ *
 |--------------------------------------------------------------------------
 | Enable/Disable System Hooks
 |--------------------------------------------------------------------------
