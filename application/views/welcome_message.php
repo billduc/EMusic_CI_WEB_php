@@ -1,7 +1,3 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
-
 <!DOCTYPE html>
 <!--[if IE 7 ]><html class="ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie8" lang="en"> <![endif]-->
@@ -79,8 +75,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 <nav>
                     <ul class="sf-menu">
-                        <li><a href="mp3s.html">Trang Chủ<span class="sub">full archive</span></a></li>
-                        <li><a href="index.html">Thể Loại<span class="sub">remix all features</span></a>
+                        <li><a href="index.html">Trang Chủ</a></li>
+                        <li><a href="index.html">Thể Loại</a>
                             <ul>
                                 <li><a href="#">Việt Nam</a>
                                     <ul>
@@ -125,11 +121,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="mp3s.html">Album<span class="sub">full archive</span></a></li>
-                        <li><a href="videos.html">Ca Sỹ<span class="sub">latest clips</span></a></li>
-                        <li><a href="gallery4.html">Nhạc Sỹ<span class="sub">Photo Gallery</span></a></li>
-                        <li><a href="gallery4.html">BXH<span class="sub">Photo Gallery</span></a></li>
-                        <li><a href="gallery4.html">Liên Hệ<span class="sub">Photo Gallery</span></a></li>
+                        <li><a href="album.html">Album</a></li>
+                        <li><a href="casi.html">Ca sĩ</a></li>
+                        <li><a href="nhacsi.html">Nhạc Sĩ</a></li>
+                        <li><a href="baihat.html">BXH</a></li>
+                        <li><a href="lienhe.html">Liên Hệ</a></li>
 
 
                     </ul><!-- end menu -->
@@ -148,55 +144,55 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <!-- MAIN IMAGE -->
                         <img src="<?= base_url('resource/frontend/images');?>/slider1.jpg"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
                         <!-- LAYERS -->
-                        <div class="tp-caption fade"
-                             data-x="566"
-                             data-y="306"
-                             data-hoffset="0"
-                             data-speed="700"
-                             data-start="800"
-                             data-easing="Back.easeInOut"
-                             data-endspeed="300"
-                             style="z-index: 11"><img src="<?= base_url('resource/frontend/images');?>/slider1-cap1.png" alt=""></div>
+                        <!-- <div class="tp-caption fade"
+                            data-x="566"
+                            data-y="306"
+                            data-hoffset="0"
+                            data-speed="700"
+                            data-start="800"
+                            data-easing="Back.easeInOut"
+                            data-endspeed="300"
+                            style="z-index: 11"><img src="<?= base_url('resource/frontend/images');?>/slider1-cap1.png" alt=""></div>
 
                         <div class="tp-caption lfb"
-                             data-x="566"
-                             data-y="305"
-                             data-hoffset="0"
-                             data-speed="700"
-                             data-start="1200"
-                             data-easing="Back.easeInOut"
-                             data-endspeed="300"
-                             style="z-index: 11"><img src="<?= base_url('resource/frontend/images');?>/slider1-cap2.png" alt=""></div>
+                            data-x="566"
+                            data-y="305"
+                            data-hoffset="0"
+                            data-speed="700"
+                            data-start="1200"
+                            data-easing="Back.easeInOut"
+                            data-endspeed="300"
+                            style="z-index: 11"><img src="<?= base_url('resource/frontend/images');?>/slider1-cap2.png" alt=""></div>
 
                         <div class="tp-caption lft"
-                             data-x="741"
-                             data-y="305"
-                             data-hoffset="0"
-                             data-speed="700"
-                             data-start="1200"
-                             data-easing="Back.easeInOut"
-                             data-endspeed="300"
-                             style="z-index: 11"><img src="<?= base_url('resource/frontend/images');?>/slider1-cap3.png" alt=""></div>
+                            data-x="741"
+                            data-y="305"
+                            data-hoffset="0"
+                            data-speed="700"
+                            data-start="1200"
+                            data-easing="Back.easeInOut"
+                            data-endspeed="300"
+                            style="z-index: 11"><img src="<?= base_url('resource/frontend/images');?>/slider1-cap3.png" alt=""></div>
 
                         <div class="tp-caption lfb"
-                             data-x="711"
-                             data-y="374"
-                             data-hoffset="0"
-                             data-speed="700"
-                             data-start="2000"
-                             data-easing="Back.easeInOut"
-                             data-endspeed="300"
-                             style="z-index: 11"><img src="<?= base_url('resource/frontend/images');?>/slider1-cap4.png" alt=""></div>
+                            data-x="711"
+                            data-y="374"
+                            data-hoffset="0"
+                            data-speed="700"
+                            data-start="2000"
+                            data-easing="Back.easeInOut"
+                            data-endspeed="300"
+                            style="z-index: 11"><img src="<?= base_url('resource/frontend/images');?>/slider1-cap4.png" alt=""></div>
 
                         <div class="tp-caption lft"
-                             data-x="714"
-                             data-y="374"
-                             data-hoffset="0"
-                             data-speed="700"
-                             data-start="2000"
-                             data-easing="Back.easeInOut"
-                             data-endspeed="300"
-                             style="z-index: 11"><img src="<?= base_url('resource/frontend/images');?>/slider1-cap5.png" alt=""></div>
+                            data-x="714"
+                            data-y="374"
+                            data-hoffset="0"
+                            data-speed="700"
+                            data-start="2000"
+                            data-easing="Back.easeInOut"
+                            data-endspeed="300"
+                            style="z-index: 11"><img src="<?= base_url('resource/frontend/images');?>/slider1-cap5.png" alt=""></div> -->
                     </li>
 
                     <!-- SLIDE  -->
@@ -204,25 +200,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <!-- MAIN IMAGE -->
                         <img src="<?= base_url('resource/frontend/images');?>/slider9.jpg"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
                         <!-- LAYERS -->
-                        <div class="tp-caption modern_big_bluebg randomrotate"
-                             data-x="603"
-                             data-y="384"
-                             data-hoffset="0"
-                             data-speed="700"
-                             data-start="1200"
-                             data-easing="Back.easeInOut"
-                             data-endspeed="300"
-                             style="z-index: 11">Responsive Design</div>
+                        <!-- <div class="tp-caption modern_big_bluebg randomrotate"
+                            data-x="603"
+                            data-y="384"
+                            data-hoffset="0"
+                            data-speed="700"
+                            data-start="1200"
+                            data-easing="Back.easeInOut"
+                            data-endspeed="300"
+                            style="z-index: 11">Responsive Design</div>
 
                         <div class="tp-caption modern_big_redbg randomrotate"
-                             data-x="701"
-                             data-y="328"
-                             data-hoffset="0"
-                             data-speed="700"
-                             data-start="1700"
-                             data-easing="Back.easeInOut"
-                             data-endspeed="300"
-                             style="z-index: 11">Retina Ready</div>
+                            data-x="701"
+                            data-y="328"
+                            data-hoffset="0"
+                            data-speed="700"
+                            data-start="1700"
+                            data-easing="Back.easeInOut"
+                            data-endspeed="300"
+                            style="z-index: 11">Retina Ready</div> -->
                     </li>
 
                     <!-- SLIDE  -->
@@ -230,55 +226,55 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <!-- MAIN IMAGE -->
                         <img src="<?= base_url('resource/frontend/images');?>/slider3.jpg"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
                         <!-- LAYERS -->
-                        <div class="tp-caption modern_big_redbg randomrotate"
-                             data-x="560"
-                             data-y="253"
-                             data-hoffset="0"
-                             data-speed="700"
-                             data-start="1000"
-                             data-easing="Back.easeInOut"
-                             data-endspeed="300"
-                             style="z-index: 11">Revolution Slider</div>
+                        <!-- <div class="tp-caption modern_big_redbg randomrotate"
+                            data-x="560"
+                            data-y="253"
+                            data-hoffset="0"
+                            data-speed="700"
+                            data-start="1000"
+                            data-easing="Back.easeInOut"
+                            data-endspeed="300"
+                            style="z-index: 11">Revolution Slider</div>
 
                         <div class="tp-caption modern_m_bluebg randomrotate"
-                             data-x="560"
-                             data-y="310"
-                             data-hoffset="0"
-                             data-speed="700"
-                             data-start="1500"
-                             data-easing="Back.easeInOut"
-                             data-endspeed="300"
-                             style="z-index: 11">Awesome MusicPlayer</div>
+                            data-x="560"
+                            data-y="310"
+                            data-hoffset="0"
+                            data-speed="700"
+                            data-start="1500"
+                            data-easing="Back.easeInOut"
+                            data-endspeed="300"
+                            style="z-index: 11">Awesome MusicPlayer</div>
 
                         <div class="tp-caption modern_m_bluebg randomrotate"
-                             data-x="560"
-                             data-y="355"
-                             data-hoffset="0"
-                             data-speed="700"
-                             data-start="2000"
-                             data-easing="Back.easeInOut"
-                             data-endspeed="300"
-                             style="z-index: 11">Wonderful Gallery</div>
+                            data-x="560"
+                            data-y="355"
+                            data-hoffset="0"
+                            data-speed="700"
+                            data-start="2000"
+                            data-easing="Back.easeInOut"
+                            data-endspeed="300"
+                            style="z-index: 11">Wonderful Gallery</div>
 
                         <div class="tp-caption modern_m_bluebg randomrotate"
-                             data-x="560"
-                             data-y="400"
-                             data-hoffset="0"
-                             data-speed="700"
-                             data-start="2500"
-                             data-easing="Back.easeInOut"
-                             data-endspeed="300"
-                             style="z-index: 11">Seo Optimized</div>
+                            data-x="560"
+                            data-y="400"
+                            data-hoffset="0"
+                            data-speed="700"
+                            data-start="2500"
+                            data-easing="Back.easeInOut"
+                            data-endspeed="300"
+                            style="z-index: 11">Seo Optimized</div>
 
                         <div class="tp-caption modern_m_bluebg randomrotate"
-                             data-x="560"
-                             data-y="445"
-                             data-hoffset="0"
-                             data-speed="700"
-                             data-start="3000"
-                             data-easing="Back.easeInOut"
-                             data-endspeed="300"
-                             style="z-index: 11">and Much More ...</div>
+                            data-x="560"
+                            data-y="445"
+                            data-hoffset="0"
+                            data-speed="700"
+                            data-start="3000"
+                            data-easing="Back.easeInOut"
+                            data-endspeed="300"
+                            style="z-index: 11">and Much More ...</div> -->
                     </li>
 
                 </ul><!-- End Slides -->
@@ -468,12 +464,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 <div class="foot-menu">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="mp3s.html">MP3</a></li>
-                        <li><a href="videos.html">Video</a></li>
-                        <li><a href="gallery.html">Photo Gallery</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="index.html">Thế loại</a></li>
+                        <li><a href="Album.html">Album</a></li>
+                        <li><a href="casi.html">Ca Sĩ</a></li>
+                        <li><a href="nhacsi.html">Nhạc Sĩ</a></li>
+                        <li><a href="baihat.html">Bảng Xếp hạng</a></li>
+                        <li><a href="lienhe.html">Liên hệ</a></li>
                     </ul><!-- end links -->
                 </div><!-- end foot menu -->
             </div><!-- row -->
@@ -483,7 +480,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 </div><!-- end layout -->
 <!-- Scripts -->
-<script type="text/javascript" src="<?= base_url('resource/frontend/js');?>/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 <script type="text/javascript" src="<?= base_url('resource/frontend/js');?>/theme20.js"></script>
 <script type="text/javascript" src="<?= base_url('resource/frontend/js');?>/bootstrap.min.js"></script>
 <script type="text/javascript" src="<?= base_url('resource/frontend/js');?>/jquery.themepunch.plugins.min.js"></script>
