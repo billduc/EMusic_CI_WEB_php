@@ -24,23 +24,23 @@ class Admin extends CI_Controller
         $this->load->helper('url');
         $this->load->model('Singer');
 
-        $config['upload_path'] = APPPATH . 'uploads/';
-        $config['allowed_types'] = 'gif|jpg|png';
-        $config['max_size'] = 2048;
-
-        $this->load->library('upload', $config);
-
-
         $data['title'] = 'Create a news singer';
 
         $this->form_validation->set_rules('name', 'Name', 'required');
-//        $this->upload->initialize($config);
 
         if ($this->form_validation->run() === FALSE) {
             $this->load->view('admin/singer/create');
         } else {
             $this->Singer->set_singer();
         }
+    }
+    public function listSinger()
+    {
+        $this->load->helper('url');
+        $this->load->model('Singer');
+
+        $data['listSinger'] =  $this->Singer->getList();
+        $this->load->view('admin/singer/index');
     }
 
 }
