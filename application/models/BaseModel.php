@@ -28,7 +28,6 @@ class BaseModel extends CI_Model
 
         $this->db->where($condition);
         return $this->db->update($this->table, $data);
-
     }
 
     public function find_all($condition=[]){
@@ -41,5 +40,11 @@ class BaseModel extends CI_Model
         return $this->db->delete($this->table);
     }
 
-
+    public function check_exists($condition){
+        $this->db->where($condition);
+        $result = $this->db->get($this->table);
+        if($result->row_array != 0)
+            return true;
+        return false;
+    }
 }
