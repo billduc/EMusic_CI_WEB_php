@@ -15,7 +15,6 @@ class BaseModel extends CI_Model
         parent::__construct();
     }
 
-
     public function setTable($table)
     {
         $this->$table = $table;
@@ -35,6 +34,11 @@ class BaseModel extends CI_Model
     public function find_all($condition=[]){
         $this->db->where($condition);
         return $this->db->get($this->table)->result_array();
+    }
+
+    public function delete($condtion){
+        $this->db->where($condtion);
+        return $this->db->delete($this->table);
     }
 
 
