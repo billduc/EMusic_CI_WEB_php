@@ -74,3 +74,4 @@
 <script src="<?=base_url('resource/backend/html/js/custom.min.js');?>"></script>
 <script src="<?=base_url('resource/backend/html/js/dashboard1.js');?>"></script>
 <script src="<?=base_url('resource/backend/plugins/bower_components/toast-master/js/jquery.toast.js');?>"></script>
+

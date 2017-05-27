@@ -6,10 +6,11 @@
  * Time: 05:52
  */
 
-function pre($list, $exit =  true){
+function pre($list, $exit = true)
+{
     echo "<pre>";
     print_r($list);
-    if ($exit){
+    if ($exit) {
         die();
     }
 }

@@ -14,39 +14,37 @@ class Admin extends MY_Controller
     {
         $this->load->helper('url');
         $this->load->view('admin/index');
+
         //$this->load->view('user/register');
     }
 
     public function singerCreate()
     {
-        $this->load->helper('form');
-        $this->load->library('form_validation');
-
-
-        $this->load->helper('url');
         $this->load->model('Singer_Model');
-
         $data['title'] = 'Create a news singer';
 
         $this->form_validation->set_rules('name', 'Name', 'required');
 
         $data = array();
         $data['content_view'] = 'admin/singer/create';
-        $data['title'] = 'Singer/Create';
 
         if ($this->form_validation->run() === FALSE) {
             $this->load->view('admin/master_layout', $data);
         } else {
             $this->Singer_Model->set_singer();
+            redirect('admin/listSinger');
         }
     }
     public function listSinger()
     {
-        $this->load->helper('url');
-        $this->load->model('SingerModel');
-
-        $data['listSinger'] =  $this->Singer_Model->getList();
-        $this->load->view('admin/singer/index');
+        $data = [];
+        $this->load->model('Singer_Model');
+        $data['listSinger'] = $this->Singer_Model->get_list();
+        $data['content_view'] = 'admin/singer/index';
+        $data['title'] = 'Signer/List';
+//        var_dump(json_encode($data['listSinger']));
+//        die();
+        $this->load->view('admin/master_layout', $data);
     }
 
     public function albumCreate()

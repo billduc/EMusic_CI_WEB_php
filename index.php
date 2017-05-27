@@ -99,6 +99,7 @@ switch (ENVIRONMENT)
  */
 	$system_path = 'system';
 
+	$cdn_path = 'resource/cdn/';
 /*
  *---------------------------------------------------------------
  * APPLICATION DIRECTORY NAME
@@ -304,6 +305,31 @@ switch (ENVIRONMENT)
 	}
 
 	define('VIEWPATH', $view_folder.DIRECTORY_SEPARATOR);
+
+// Set the current directory correctly for CLI requests
+if (defined('STDIN'))
+{
+    chdir(dirname(__FILE__));
+}
+
+else
+{
+    // Ensure there's a trailing slash
+    $cdn_path = strtr(
+            rtrim($cdn_path, '/\\'),
+            '/\\',
+            DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+        ).DIRECTORY_SEPARATOR;
+}
+
+// Is the system path correct?
+if ( ! is_dir($cdn_path))
+{
+    header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+    echo 'Your system folder path does not appear to be set correctly. Please open the following file and correct this: '.pathinfo(__FILE__, PATHINFO_BASENAME);
+    exit(3); // EXIT_CONFIG
+}
+define('CDNPATH', $cdn_path);
 
 /*
  * --------------------------------------------------------------------
