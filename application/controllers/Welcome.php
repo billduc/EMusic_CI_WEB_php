@@ -20,7 +20,8 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-	    //$this->load->helper('url');
+//        $this->load->model('User_Model');
+//        $data =
 		$this->load->view('user/master_layout');
 	}
 }

@@ -14,9 +14,9 @@ class Home extends MY_Controller {
     }
 
     public function index(){
-        $data = array();
-        $data['temp'] = 'user/home/index';
-        $this->load->view('user/master_layout',$data);
+        //$data = array();
+        //$data['temp'] = 'user/home/index';
+        $this->load->view('user/master_layout_login');
     }
 
 }

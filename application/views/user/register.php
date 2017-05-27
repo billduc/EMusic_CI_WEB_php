@@ -39,7 +39,7 @@
                 <div class="form-row">
                     <label>
                         <span style="width: 130px;">Tên Đăng nhập</span>
-                        <input type="text" name="name" id = "userName">
+                        <input type="text" name="name" id = "username">
                     </label>
                 </div>
 
@@ -64,9 +64,9 @@
                         <span>tôi đồng ý với những điểu khoản  <a href="#">terms and conditions</a></span>
                     </label>
                 </div>
-
+                <?php echo validation_errors(); ?>
                 <div class="form-row">
-                    <button type="submit">Đặng Ký</button>
+                    <button type="submit" name="submit">Đặng Ký</button>
                 </div>
 
             </div>
