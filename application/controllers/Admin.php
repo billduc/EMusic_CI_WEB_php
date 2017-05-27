@@ -10,6 +10,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends MY_Controller
 {
+    public function __construct()
+    {
+        parent::__construct();
+        if (!$this->user_is_login('admin')){
+            redirect('admin_site/login/login', 'refresh');
+        }
+    }
+
     public function index()
     {
         $this->load->helper('url');
@@ -64,6 +72,16 @@ class Admin extends MY_Controller
     public function songCreate()
     {
 
+    }
+    public function logout()
+    {
+        if($this->user_is_login('admin'))
+        {
+            //neu thanh vien da dang nhap thi xoa session login
+            $this->session->unset_userdata('admin');
+        }
+        $this->session->set_flashdata('flash_message', 'Đăng xuất thành công');
+        redirect('admin_site/login/login');
     }
 
 }

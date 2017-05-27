@@ -14,7 +14,7 @@ class Admin_model extends MY_Model
     public function check_login($username, $password)
     {
         //them dieu kien kiem tra email va password
-        $where = array('email' => $username, 'password' => $password);
+        $where = array('username' => $username, 'password' => $password);
         $this->db->where($where);
         //thuc hien cau truy van
         $query = $this->db->get($this->table);

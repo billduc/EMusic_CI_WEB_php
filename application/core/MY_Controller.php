@@ -47,4 +47,14 @@ class MY_Controller extends CI_Controller {
         }
 
     }
+    public function user_is_login($key = 'login')
+    {
+        $user_data = $this->session->userdata($key);
+        //neu chua login
+        if(!$user_data)
+        {
+            return false;
+        }
+        return true;
+    }
 }
