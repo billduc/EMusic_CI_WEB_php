@@ -1,9 +1,5 @@
 <?php
-/**
- * Created by dinhty.luu@gmail.com
- * Date: 24/05/2017
- * Time: 15:42
- */
+
 $this->load->view('admin/_start_page');
 ?>
 <div class="row bg-title">

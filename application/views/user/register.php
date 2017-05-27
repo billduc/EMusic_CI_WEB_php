@@ -20,6 +20,7 @@
 </head>
 
 
+<body>
 
 <div class="main-content">
 
@@ -38,7 +39,7 @@
                 <div class="form-row">
                     <label>
                         <span style="width: 130px;">Tên Đăng nhập</span>
-                        <input type="text" name="name" id = "uerName">
+                        <input type="text" name="name" id = "userName">
                     </label>
                 </div>
 

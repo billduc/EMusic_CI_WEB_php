@@ -5,7 +5,7 @@
  * Date: 24/05/2017
  * Time: 17:15
  */
-class Singer extends CI_Model
+class Singer_Model extends MY_Model
 {
     protected $_table = 'singer';
 
@@ -49,7 +49,7 @@ class Singer extends CI_Model
             $this->upload->data();
             $data['avatar'] = '/uploads/singer/' . $this->upload->file_name;
         }
-
+        print_r($data);
         if ($id === false) {
             return $this->db->insert($this->_table, $data);
         } else {

@@ -1,9 +1,5 @@
 <?php
-/**
- * Created by dinhty.luu@gmail.com
- * Date: 24/05/2017
- * Time: 16:30
- */
+
 
 $this->load->view('admin/_header');
 ?>
@@ -63,19 +59,19 @@ $this->load->view('admin/_header');
             </div>
             <ul class="nav" id="side-menu">
                 <li style="padding: 70px 0 0;">
-                    <a href="<?=base_url();?>" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Dashboard</a>
+                    <a href="<?=base_url();?>" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Bảng Điều Khiển</a>
                 </li>
                 <li>
-                    <a href="<?=base_url('admin/singer');?>" class="waves-effect"><i class="fa fa-users" aria-hidden="true"></i> Singer</a>
+                    <a href="<?=base_url('admin/singer');?>" class="waves-effect"><i class="fa fa-users" aria-hidden="true"></i>Ca Sĩ</a>
                 </li>
                 <li>
-                    <a href="<?=base_url('admin/artist');?>" class="waves-effect"><i class="fa fa-user" aria-hidden="true"></i> Artist</a>
+                    <a href="<?=base_url('admin/artist');?>" class="waves-effect"><i class="fa fa-user" aria-hidden="true"></i>Nhạc Sĩ</a>
                 </li>
                 <li>
                     <a href="<?=base_url('admin/album');?>" class="waves-effect"><i class="fa fa-book" aria-hidden="true"></i> Album</a>
                 </li>
                 <li>
-                    <a href="<?=base_url('admin/album');?>" class="waves-effect"><i class="fa fa-music" aria-hidden="true"></i> Song</a>
+                    <a href="<?=base_url('admin/album');?>" class="waves-effect"><i class="fa fa-music" aria-hidden="true"></i>Bài Hát</a>
                 </li>
 
 <!--                <li>-->
@@ -87,7 +83,7 @@ $this->load->view('admin/_header');
 
             </ul>
             <div class="center p-20">
-                <a href="<?=base_url('admin/logout');?>" target="_blank" class="btn btn-danger btn-block waves-effect waves-light">Logout</a>
+                <a href="<?=base_url('admin/logout');?>" target="_blank" class="btn btn-danger btn-block waves-effect waves-light">Đăng Xuất</a>
             </div>
         </div>
 

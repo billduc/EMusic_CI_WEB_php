@@ -6,14 +6,15 @@
  * Time: 15:18
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-require_once "BackendBase.php";
 
-class Admin extends BackendBase
+
+class Admin extends MY_Controller
 {
     public function index()
     {
         $this->load->helper('url');
         $this->load->view('admin/index');
+        //$this->load->view('user/register');
     }
 
     public function singerCreate()
@@ -23,7 +24,7 @@ class Admin extends BackendBase
 
 
         $this->load->helper('url');
-        $this->load->model('Singer');
+        $this->load->model('Singer_Model');
 
         $data['title'] = 'Create a news singer';
 
@@ -36,15 +37,15 @@ class Admin extends BackendBase
         if ($this->form_validation->run() === FALSE) {
             $this->load->view('admin/master_layout', $data);
         } else {
-            $this->Singer->set_singer();
+            $this->Singer_Model->set_singer();
         }
     }
     public function listSinger()
     {
         $this->load->helper('url');
-        $this->load->model('Singer');
+        $this->load->model('SingerModel');
 
-        $data['listSinger'] =  $this->Singer->getList();
+        $data['listSinger'] =  $this->Singer_Model->getList();
         $this->load->view('admin/singer/index');
     }
 
