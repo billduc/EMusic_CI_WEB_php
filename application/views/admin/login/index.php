@@ -17,11 +17,11 @@
 <body>
 
 
-<div class="main-content">
+<div class="main-content" style="margin-top: 20px;">
 
 
 
-    <form class="form-login" method="post" action="#" >
+    <form class="form-login" method="post" action="" >
 
         <div class="form-log-in-with-email">
 
@@ -30,6 +30,10 @@
                 <div class="form-title-row">
                     <h1>Đăng Nhập Trang Quảng Trị</h1>
                 </div>
+                <?php echo validation_errors(); ?>
+
+                <div class="error" id="login_email_error"><?php echo form_error('username'); echo '<br>';?></div>
+                <div class="error" id="login_password_error"><?php echo form_error('password'); echo '<br>';?></div>
 
                 <div class="form-row">
                     <label>
@@ -46,13 +50,13 @@
                 </div>
 
                 <div class="form-row">
-                    <button type="submit">Đăng Nhập</button>
+                    <div class="error" id="login_error"><?php echo form_error('login')?></div>
+                    <button type="submit" name="submit">Đăng Nhập</button>
                 </div>
 
             </div>
 
-            <a href="#" class="form-forgotten-password">Forgotten password &middot;</a>
-            <a href="#" class="form-create-an-account">Create an account &rarr;</a>
+
 
         </div>
 
