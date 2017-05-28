@@ -80,7 +80,7 @@ class Singer extends MY_Controller
         }
 
         $this->Singer_Model->delete((int)$id);
-        redirect('admin/listSinger');
+        redirect('admin/singer');
     }
     public function listSinger()
     {

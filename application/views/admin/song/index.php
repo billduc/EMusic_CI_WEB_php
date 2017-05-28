@@ -44,6 +44,7 @@
             tempObject.push(data[index].name);
             var imageSource = '<a href="' + baseUrl + data[index].file_media + '">' + data[index].name + '</a>';
             tempObject.push(imageSource);
+            tempObject.push(data[index].view_num);
             var des = data[index].description;
             if (des.length > 100) {
                 des = des.slice(0, 100) + ' ....';
@@ -85,6 +86,7 @@
                 {"title": "ID"},
                 {"title": "Name"},
                 {"title": "File Mp3"},
+                {"title": "Lượt nghe"},
                 {"title": "Description"},
                 {"title": "Artist"},
                 {"title": "Singer"},
@@ -93,7 +95,7 @@
             ],
             "aoColumnDefs": [
                 {
-                    "aTargets": [7],
+                    "aTargets": [8],
                     "mData": null,
                     "mRender": function (data, type, full) {
                         if (data.length >= 0) {
