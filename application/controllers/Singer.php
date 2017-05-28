@@ -30,7 +30,7 @@ class Singer extends MY_Controller
             $this->load->view('admin/master_layout', $data);
         } else {
             $this->Singer_Model->set_singer();
-            redirect('admin/song');
+            redirect('admin/singer');
         }
     }
 

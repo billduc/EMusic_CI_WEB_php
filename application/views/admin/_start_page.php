@@ -73,7 +73,7 @@ $this->load->view('admin/_header');
 
             </ul>
             <div class="center p-20">
-                <a href="<?=base_url('admin/logout');?>" target="_blank" class="btn btn-danger btn-block waves-effect waves-light">Đăng Xuất</a>
+                <a href="<?=base_url('admin/logout');?>" class="btn btn-danger btn-block waves-effect waves-light">Đăng Xuất</a>
             </div>
         </div>
 
