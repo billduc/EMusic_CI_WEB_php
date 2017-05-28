@@ -41,7 +41,12 @@
             tempObject.push(data[index].name);
             var imageSource = '<img alt=""  src=' + baseUrl + data[index].thumbnail + ' style="height:100px;width:100px" />';
             tempObject.push(imageSource);
-            tempObject.push(data[index].description);
+            var des = data[index].description;
+            if (des.length > 100) {
+                des = des.slice(0, 100) + ' ....';
+            }
+            tempObject.push(des);
+
 
             dataSet.push(tempObject);
         }

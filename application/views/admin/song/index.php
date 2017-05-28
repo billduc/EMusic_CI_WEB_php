@@ -44,7 +44,12 @@
             tempObject.push(data[index].name);
             var imageSource = '<a href="' + baseUrl + data[index].file_media + '">' + data[index].name + '</a>';
             tempObject.push(imageSource);
-            tempObject.push(data[index].description);
+            var des = data[index].description;
+            if (des.length > 100) {
+                des = des.slice(0, 100) + ' ....';
+            }
+            tempObject.push(des);
+
             Object.keys(artist).map(function(k) {
                 if (data[index].artist_id == k){
                     tempObject.push(artist[k]);

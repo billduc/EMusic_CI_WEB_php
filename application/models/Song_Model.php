@@ -47,5 +47,15 @@ class Song_Model extends MY_Model
         //tra ve du lieu
         return $query->result();
     }
+    public function updateView($id)
+    {
+        if (is_array($id)){
+            foreach ($id as $i){
+                $song = $this->get_info($i);
+                $data['view_num'] = ((int) $song->view_num) + 1;
+                $this->update($i, $data);
+            }
+        }
+    }
 
 }

@@ -35,7 +35,7 @@
                 </div>
                 <div class="panel-footer">
                     <label class="btn btn-default btn-file">
-                        Browse <input type="file" id="ava-upload" name="avatar" onchange="readURL(this)">
+                        Browse <input type="file" id="ava-upload" name="thumbnail" onchange="readURL(this)">
                     </label>
                 </div>
             </div>

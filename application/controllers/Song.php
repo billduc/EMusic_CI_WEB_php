@@ -119,6 +119,7 @@ class Song extends MY_Controller
         $data['song'] = $this->Song_Model->get_info($id);
         $data['listSong'] = $this->Song_Model->get_list(['order' => ['view_num', 'DESC'], 'limit' => [6, 0]]);
         $data['listSinger'] = ($this->array_make('id', $this->Singer_Model->get_list(), ['name', 'avatar']));
+        $this->Song_Model->updateView([$id]);
         $this->load->view('song/listening', $data);
     }
 
