@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd2c9e64-0009-4227-8a2b-89d4d4f950f7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Singer.php" afterPath="$PROJECT_DIR$/application/controllers/Singer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/song/index.php" afterPath="$PROJECT_DIR$/application/views/admin/song/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/album/list.php" afterPath="$PROJECT_DIR$/application/views/album/list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/artist/list.php" afterPath="$PROJECT_DIR$/application/views/artist/list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/singer/list.php" afterPath="$PROJECT_DIR$/application/views/singer/list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/song-type/list.php" afterPath="$PROJECT_DIR$/application/views/song-type/list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/song/listening.php" afterPath="$PROJECT_DIR$/application/views/song/listening.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Song.php" afterPath="$PROJECT_DIR$/application/controllers/Song.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,11 +14,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Song.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Song.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/Song.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1444">
-              <caret line="97" column="48" lean-forward="true" selection-start-line="97" selection-start-column="48" selection-end-line="97" selection-end-column="48" />
+            <state relative-caret-position="580">
+              <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="2" selection-end-line="94" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -40,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Artist_Model.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Artist_Model.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/Artist_Model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+            <state relative-caret-position="378">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -185,7 +179,6 @@
         <option value="$PROJECT_DIR$/application/views/user/header.php" />
         <option value="$PROJECT_DIR$/application/controllers/Artist.php" />
         <option value="$PROJECT_DIR$/application/controllers/SongType.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Song.php" />
         <option value="$PROJECT_DIR$/application/models/Song_Model.php" />
         <option value="$PROJECT_DIR$/application/views/admin/album/update.php" />
         <option value="$PROJECT_DIR$/application/views/admin/album/index.php" />
@@ -199,6 +192,7 @@
         <option value="$PROJECT_DIR$/application/views/admin/song/index.php" />
         <option value="$PROJECT_DIR$/application/controllers/Singer.php" />
         <option value="$PROJECT_DIR$/application/models/Artist_Model.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Song.php" />
       </list>
     </option>
   </component>
@@ -968,12 +962,12 @@
       <workItem from="1495861289381" duration="400000" />
       <workItem from="1495861799079" duration="21230000" />
       <workItem from="1495930233234" duration="17358000" />
-      <workItem from="1495950676120" duration="13526000" />
+      <workItem from="1495950676120" duration="13729000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55241000" />
+    <option name="totallyTimeSpent" value="55444000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
@@ -1459,14 +1453,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Song.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1444">
-          <caret line="97" column="48" lean-forward="true" selection-start-line="97" selection-start-column="48" selection-end-line="97" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Artist.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
@@ -1485,8 +1471,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/Artist_Model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        <state relative-caret-position="378">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Song.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="2" selection-end-line="94" selection-end-column="11" />
           <folding />
         </state>
       </provider>

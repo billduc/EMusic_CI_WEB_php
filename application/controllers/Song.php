@@ -89,19 +89,20 @@ class Song extends MY_Controller
     public function delete()
     {
         $id = $this->input->get('id', TRUE);
-
-        if (!$this->user_is_login('admin') || !$this->user_is_login('user') || !is_numeric($id)) {
-            redirect(base_url(), 'refresh');
-        }
+//
+//        if (!$this->user_is_login('admin') || !$this->user_is_login('user') || !is_numeric($id)) {
+//            redirect(base_url(), 'refresh');
+//        }
         $song = $this->Song_Model->get_info($id);
-        if ($song->user_id == $this->currentUser()->id){
-            $this->Song_Model->delete((int)$id);
-            redirect(base_url('user_site/user/manage'));
-        }
         if ($this->user_is_login('admin')){
             $this->Song_Model->delete((int)$id);
             redirect('admin/song');
         }
+        if ($song->user_id == $this->currentUser()->id){
+            $this->Song_Model->delete((int)$id);
+            redirect(base_url('user_site/user/manage'));
+        }
+
     }
 
     public function listening()
