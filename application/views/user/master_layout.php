@@ -74,7 +74,7 @@
                                             </a>
                                             <h3><a href="song/listening?id=<?= $value->id; ?>"><?=$value->name;?></a></h3>
                                             <span> <?=$listSinger[$value->singer_id][0];?> </span>
-                                            <span> 1,892,250 Plays </span>
+                                            <span> <?= $value->view_num; ?> Plays </span>
                                         </li>
                                     <?php endforeach; ?>
                                 </ul>
