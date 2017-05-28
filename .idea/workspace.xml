@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd2c9e64-0009-4227-8a2b-89d4d4f950f7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Singer.php" afterPath="$PROJECT_DIR$/application/controllers/Singer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/_start_page.php" afterPath="$PROJECT_DIR$/application/views/admin/_start_page.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/artist/index.php" afterPath="$PROJECT_DIR$/application/views/admin/artist/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/singer/index.php" afterPath="$PROJECT_DIR$/application/views/admin/singer/index.php" />
     </list>
@@ -72,7 +70,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_start_page.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_start_page.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/admin/_start_page.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="566">
@@ -85,18 +83,18 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/admin/singer/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="47" column="33" lean-forward="true" selection-start-line="43" selection-start-column="12" selection-end-line="47" selection-end-column="33" />
+            <state relative-caret-position="382">
+              <caret line="45" column="50" lean-forward="true" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/admin/artist/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="47" column="33" lean-forward="false" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
+            <state relative-caret-position="468">
+              <caret line="45" column="50" lean-forward="false" selection-start-line="45" selection-start-column="50" selection-end-line="45" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -188,9 +186,9 @@
         <option value="$PROJECT_DIR$/application/views/user/master_layout.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/application/controllers/Singer.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/_start_page.php" />
         <option value="$PROJECT_DIR$/application/views/admin/singer/index.php" />
         <option value="$PROJECT_DIR$/application/views/admin/artist/index.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/_start_page.php" />
       </list>
     </option>
   </component>
@@ -681,12 +679,12 @@
       <workItem from="1495860306847" duration="485000" />
       <workItem from="1495861289381" duration="400000" />
       <workItem from="1495861799079" duration="21230000" />
-      <workItem from="1495930233234" duration="12817000" />
+      <workItem from="1495930233234" duration="13173000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37174000" />
+    <option name="totallyTimeSpent" value="37530000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
@@ -1130,14 +1128,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="20" lean-forward="true" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Song.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="760">
@@ -1150,22 +1140,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-140">
           <caret line="32" column="34" lean-forward="false" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/singer/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="47" column="33" lean-forward="true" selection-start-line="43" selection-start-column="12" selection-end-line="47" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/artist/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="47" column="33" lean-forward="false" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -1190,6 +1164,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="566">
           <caret line="75" column="56" lean-forward="false" selection-start-line="75" selection-start-column="56" selection-end-line="75" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="20" lean-forward="true" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/singer/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="45" column="50" lean-forward="true" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/artist/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="45" column="50" lean-forward="false" selection-start-line="45" selection-start-column="50" selection-end-line="45" selection-end-column="50" />
           <folding />
         </state>
       </provider>

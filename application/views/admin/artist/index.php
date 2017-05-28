@@ -43,7 +43,7 @@
             tempObject.push(imageSource);
             var des = data[index].description;
             if (des.length > 100){
-                des+=' ....';
+                des = des.slice(0, 100) + ' ....';
             }
             tempObject.push(des);
 

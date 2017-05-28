@@ -42,8 +42,8 @@
             var imageSource = '<img alt=""  src=' + baseUrl + data[index].avatar + ' style="height:100px;width:100px" />';
             tempObject.push(imageSource);
             var des = data[index].description;
-            if (des.length > 100){
-                des+=' ....';
+            if (des.length > 100) {
+                des = des.slice(0, 100) + ' ....';
             }
             tempObject.push(des);
 
@@ -74,8 +74,8 @@
                 "aTargets": [4],
                 "mData": null,
                 "mRender": function (data, type, full) {
-                    return '<a type="button" id="editCmt" action="update" class="btn btn-warning" href="/singer/update?id='+data[0]+'">Sửa</a>' +
-                        '<a type="button" id="delCmt" action="update" class="btn btn-danger" href="/singer/delete?id='+data[0]+'">Xóa</a>'
+                    return '<a type="button" id="editCmt" action="update" class="btn btn-warning" href="/singer/update?id=' + data[0] + '">Sửa</a>' +
+                        '<a type="button" id="delCmt" action="update" class="btn btn-danger" href="/singer/delete?id=' + data[0] + '">Xóa</a>'
                     // '<button type="button" id="accessPost" action="update" class="btn btn-success">Truy cập bài viết</button>'
                 }
             }
