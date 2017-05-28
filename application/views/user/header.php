@@ -44,7 +44,6 @@
                         <li><a href="index.html">Trang Chủ</a></li>
                         <li><a href="index.html">Thể Loại</a>
                             <ul>
-
                                 <li><a href="#">Việt Nam</a>
                                     <ul>
                                         <li><a href="shortcode_accordion.html">Nhạc Trẻ</a></li>
@@ -56,7 +55,6 @@
                                         <li><a href="shortcode_social_icons.html">Thiếu Nhi</a></li>
                                         <li><a href="shortcode_tab.html">Rock Việt</a></li>
                                         <li><a href="shortcode_toggle.html">Cách Mạnh</a></li>
-
                                     </ul>
                                 </li>
                                 <li><a href="shop.html">Âu Mỹ</a>
@@ -93,8 +91,6 @@
                         <li><a href="nhacsi.html">Nhạc Sĩ</a></li>
                         <li><a href="baihat.html">BXH</a></li>
                         <li><a href="lienhe.html">Liên Hệ</a></li>
-
-
                     </ul><!-- end menu -->
                 </nav><!-- end nav -->
             </div><!-- row -->
