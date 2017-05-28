@@ -72,7 +72,7 @@
                     "mData": null,
                     "mRender": function (data, type, full) {
                         if (data.length >= 0) {
-                            return '<a type="button" id="editCmt" action="update" class="btn btn-success" href="/album/song-list?id=' + data[0] + '">List Song</a>'+
+                            return '<a type="button" id="editCmt" action="update" class="btn btn-success" href="/album/song?id=' + data[0] + '">List Song</a>'+
                             '<a type="button" id="editCmt" action="update" class="btn btn-warning" href="/album/update?id=' + data[0] + '">Sửa</a>' +
                                 '<a type="button" id="delCmt" action="update" class="btn btn-danger" href="/album/delete?id=' + data[0] + '">Xóa</a>'
                         }

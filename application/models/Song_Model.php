@@ -29,7 +29,10 @@ class Song_Model extends MY_Model
             $data['file_media'] = $this->uploadFileMp3();
         }
         if ($this->session->userdata('user')){
-            
+            $data['user_id'] = $this->session->userdata('user')->id;
+        }
+        if ($this->session->userdata('admin')){
+            $data['user_id'] = $this->session->userdata('admin')->id;
         }
         if ($id === false) {
             return $this->create($data);

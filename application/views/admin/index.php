@@ -18,7 +18,7 @@
             <ul class="list-inline two-part">
                 <i class="fa fa-user fa-5x" aria-hidden="true"></i>
                 <li class="text-right"><i class="ti-arrow-up text-purple"></i> <span
-                            class="counter text-purple"><?=$totalArtist;?></span></li>
+                            class="counter text-purple"><?= $totalArtist; ?></span></li>
             </ul>
         </div>
     </div>
@@ -28,7 +28,7 @@
             <ul class="list-inline two-part">
                 <i class="fa fa-book fa-5x" aria-hidden="true"></i>
                 <li class="text-right"><i class="ti-arrow-up text-info"></i> <span
-                            class="counter text-info">911</span></li>
+                            class="counter text-info"><?= $totalAlbum; ?></span></li>
             </ul>
         </div>
     </div>
@@ -38,7 +38,7 @@
             <ul class="list-inline two-part">
                 <i class="fa fa-music fa-5x" aria-hidden="true"></i>
                 <li class="text-right"><i class="ti-arrow-up text-purple"></i> <span
-                            class="counter text-purple"><?=$totalSong;?></span></li>
+                            class="counter text-purple"><?= $totalSong; ?></span></li>
             </ul>
         </div>
     </div>

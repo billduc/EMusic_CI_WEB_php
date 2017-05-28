@@ -24,9 +24,11 @@ class Admin extends MY_Controller
         $this->load->model('Singer_Model');
         $this->load->model('Artist_Model');
         $this->load->model('Song_Model');
+        $this->load->model('Album_Model');
         $data['totalSinger'] = $this->Singer_Model->get_total();
         $data['totalArtist'] = $this->Artist_Model->get_total();
         $data['totalSong'] = $this->Song_Model->get_total();
+        $data['totalAlbum'] = $this->Album_Model->get_total();
         $data['content_view'] = 'admin/index';
         $this->load->view('admin/master_layout', $data);
 

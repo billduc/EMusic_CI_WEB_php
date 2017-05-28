@@ -94,4 +94,8 @@ class Song extends MY_Controller
         $this->Song_Model->delete((int)$id);
         redirect('admin/song');
     }
+    public function listening()
+    {
+
+    }
 }

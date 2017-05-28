@@ -12,6 +12,12 @@ class Album extends MY_Controller
     {
         parent::__construct();
         $this->load->model('Album_Model');
+
+        $this->load->model('Singer_Model');
+        $this->load->model('Song_Model');
+        $this->load->model('Artist_Model');
+        $this->load->model('SongType_Model');
+        $this->load->model('SongList_Model');
     }
 
     public function create()
@@ -82,5 +88,65 @@ class Album extends MY_Controller
 
         $this->Album_Model->delete((int)$id);
         redirect('admin/album');
+    }
+
+    public function song()
+    {
+        $id = $this->input->get('id', TRUE);
+
+        if (!is_numeric($id)) {
+            redirect('admin_site/login/login', 'refresh');
+        }
+        if (!$this->user_is_login('admin')) {
+            redirect('admin_site/login/login', 'refresh');
+        }
+        $data = [];
+        $album = $this->Album_Model->get_info($id);
+        if (!$album) {
+            redirect('admin_site/login/login', 'refresh');
+        }
+        $data['listSinger'] = ($this->array_make('id', $this->Singer_Model->get_list(), 'name'));
+        $data['listArtist'] = ($this->array_make('id', $this->Artist_Model->get_list(), 'name'));
+        $data['listSongType'] = ($this->array_make('id', $this->SongType_Model->get_list(), 'name'));
+        $data['listSongList'] = ($this->array_make_with_condition('id', $this->SongList_Model->get_list(), 'album_id', $id));
+        $data['listSong'] = $this->Song_Model->get_list();
+        $data['content_view'] = 'admin/album/list-song';
+        $data['title'] = 'Song List Album ' . $album->name;
+        $data['idAlbum'] = $id;
+        $this->load->view('admin/master_layout', $data);
+    }
+
+    public function songAdd()
+    {
+        if (!$this->user_is_login('admin')) {
+            redirect('admin_site/login/login', 'refresh');
+        }
+        $params = $this->input->get();
+        if ($this->SongList_Model->set_data($params)) {
+            redirect('album/song?id=' . $params['album_id']);
+        } else {
+            redirect('admin/album');
+        }
+    }
+
+    public function songRemove()
+    {
+        $params = $this->input->get();
+        $id = isset($params['idSongList']) ? $params['idSongList'] : null;
+
+        if (!is_numeric($id)) {
+            redirect('admin_site/login/login', 'refresh');
+        }
+        if (!$this->user_is_login('admin')) {
+            redirect('admin_site/login/login', 'refresh');
+        }
+
+        if ($this->SongList_Model->delete((int)$id)) {
+            redirect('album/song?id=' . $params['albumId']);
+        } else {
+            redirect('admin/album');
+        }
+
+
     }
 }

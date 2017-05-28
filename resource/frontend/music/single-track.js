@@ -16,8 +16,8 @@ var myPlaylist = [
 ];
 jQuery(document).ready(function ($) {
 	$('.music-single').ttwMusicPlayer(myPlaylist, {
-		currencySymbol:'$',
-		buyText:'BUY',
+		// currencySymbol:'$',
+		// buyText:'BUY',
 		tracksToShow:3,
 		autoplay:true,
 		ratingCallback:function(index, playlistItem, rating){
