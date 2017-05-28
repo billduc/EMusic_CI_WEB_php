@@ -61,3 +61,6 @@ $route['admin/artist'] = 'artist/index';
 
 $route['admin/song/create'] = 'song/create';
 $route['admin/song'] = 'song/index';
+
+$route['admin/album/create'] = 'album/create';
+$route['admin/album'] = 'album/index';

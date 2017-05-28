@@ -4,13 +4,13 @@
 
 var myPlaylist = [
 	{
-		mp3:'music/1.mp3',
-		title:'Missing You',
+		mp3:'music/2.mp3',
+		title:'Missing Youuuuuuuuuuuuuuuu',
 		artist:'Alexander Doe feat. Morina Jackson',
-		rating:5,
-		buy:'#',
-		price:'17.99',
-		duration:'0:38',
+		// rating:5,
+		// buy:'#',
+		// price:'17.99',
+		// duration:'0:38',
 		cover:'music/1.jpg'	
 	}
 ];

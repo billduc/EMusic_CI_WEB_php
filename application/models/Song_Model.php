@@ -28,6 +28,9 @@ class Song_Model extends MY_Model
         if (isset($_FILES['file_media']) && !empty($_FILES['file_media']['name'])){
             $data['file_media'] = $this->uploadFileMp3();
         }
+        if ($this->session->userdata('user')){
+            
+        }
         if ($id === false) {
             return $this->create($data);
         } else {
