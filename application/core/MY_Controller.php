@@ -56,6 +56,14 @@ class MY_Controller extends CI_Controller
         }
         return true;
     }
+    public function currentUser($key = 'user'){
+        $user_data = $this->session->userdata($key);
+        //neu chua login
+        if (!$user_data) {
+            return false;
+        }
+        return $user_data;
+    }
 
     public function array_make($key, $data, $value)
     {

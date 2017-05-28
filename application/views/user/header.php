@@ -6,8 +6,18 @@
 <!-- * Time: 15:18-->
 <!-- */-->
 <?php
+function initHeader($k, $listSongTypeHeader)
+{
+    $str = '';
+    foreach ($listSongTypeHeader as $songType) {
+        if ($k == $songType->group) {
+            $str .= '<li><a href="' . base_url('songType/listSong?id=' . $songType->id) . '">' . $songType->name . '</a></li>';
+        }
+    }
+    return $str;
+}
 
-;?>
+; ?>
 <div class="row clearfix">
     <div class="little-head">
 
@@ -17,7 +27,6 @@
                     Welcome <?= $this->session->userdata('user')->username; ?>
                     <span class="caret"></span></button>
                 <ul class="dropdown-menu">
-                    <li><a href="<?= base_url('user_site/user/profile'); ?>">Profile</a></li>
                     <li><a href="<?= base_url('user_site/user/manage'); ?>">Quản lý tài khoản</a></li>
                     <li><a href="<?= base_url('user_site/user/logout'); ?>">Thoát</a></li>
                 </ul>
@@ -37,67 +46,36 @@
             </form><!-- end form -->
         </div><!-- search -->
     </div><!-- little head -->
-        </div><!-- row -->
+</div><!-- row -->
 
-        <div class="headdown">
-            <div class="row clearfix">
-                <div class="logo bottomtip" title="Best and Most Popular Musics">
-                    <a href="#"><img src="<?= base_url('resource/frontend/images');?>/logo.png" alt="Best and Most Popular Musics"></a>
-                </div><!-- end logo -->
+<div class="headdown">
+    <div class="row clearfix">
+        <div class="logo bottomtip" title="Best and Most Popular Musics">
+            <a href="#"><img src="<?= base_url('resource/frontend/images'); ?>/logo.png"
+                             alt="Best and Most Popular Musics"></a>
+        </div><!-- end logo -->
 
-                <nav>
-                    <ul class="sf-menu">
-                        <li><a href="index.html">Trang Chủ</a></li>
-                        <li><a href="index.html">Thể Loại</a>
-                            <ul>
-                                <li><a href="#">Việt Nam</a>
-                                    <ul>
-                                        <li><a href="shortcode_accordion.html">Nhạc Trẻ</a></li>
-                                        <li><a href="shortcode_buttons.html">Trữ Tình</a></li>
-                                        <li><a href="shortcode_tables.html">Remix Việt</a></li>
-                                        <li><a href="shortcode_lightbox.html">Rap Việt</a></li>
-                                        <li><a href="shortcode_googlemap.html">Tiền Chiến</a></li>
-                                        <li><a href="shortcode_video.html">Nhạc Trịnh</a></li>
-                                        <li><a href="shortcode_social_icons.html">Thiếu Nhi</a></li>
-                                        <li><a href="shortcode_tab.html">Rock Việt</a></li>
-                                        <li><a href="shortcode_toggle.html">Cách Mạnh</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="shop.html">Âu Mỹ</a>
-                                    <ul>
-                                        <li><a href="shop.html">Pop</a></li>
-                                        <li><a href="shop_product.html">Rock</a></li>
-                                        <li><a href="shop_cart.html">Electronica/Dance</a></li>
-                                        <li><a href="shop_checkout.html">R&B/Hhip Hop/Rap</a></li>
-                                        <li><a href="shop_cart.html">Blue/Jazz</a></li>
-                                        <li><a href="shop_cart.html">Country</a></li>
-                                        <li><a href="shop_cart.html">Latin</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="shop.html">Châu Á</a>
-                                    <ul>
-                                        <li><a href="shop_cart.html">Nhạc Hàn</a></li>
-                                        <li><a href="shop_cart.html">Nhạc Hoa</a></li>
-                                        <li><a href="shop_cart.html">Nhạc Nhật</a></li>
-                                        <li><a href="shop_cart.html">Nhạc Thái</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="shop.html">Khác</a>
-                                    <ul>
-                                        <li><a href="shop_cart.html">Không Lời</a></li>
-                                        <li><a href="shop_cart.html">Nhạc Phim</a></li>
-                                        <li><a href="shop_cart.html">Thể Loại Khác</a></li>
-
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="<?=base_url('album/list');?>">Album</a></li>
-                        <li><a href="<?=base_url('singer/list');?>">Ca sĩ</a></li>
-                        <li><a href="<?=base_url('artist/list');?>">Nhạc Sĩ</a></li>
-                        <li><a href="<?=base_url('bxh/list');?>">BXH</a></li>
-                        <li><a href="<?=base_url('lienhe');?>">Liên Hệ</a></li>
-                    </ul><!-- end menu -->
-                </nav><!-- end nav -->
-            </div><!-- row -->
-        </div><!-- headdown -->
+        <nav>
+            <ul class="sf-menu">
+                <li><a href="<?=base_url();?>">Trang Chủ</a></li>
+                <li><a href="#">Thể Loại</a>
+                    <ul>
+                        <?php foreach ($listGroup as $key => $group): ?>
+                            <li>
+                                <a href="#"><?= $group; ?></a>
+                                <ul>
+                                    <?= initHeader($key, $listSongTypeHeader); ?>
+                                </ul>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </li>
+                <li><a href="<?= base_url('album/list'); ?>">Album</a></li>
+                <li><a href="<?= base_url('singer/list'); ?>">Ca sĩ</a></li>
+                <li><a href="<?= base_url('artist/list'); ?>">Nhạc Sĩ</a></li>
+                <li><a href="<?= base_url('song/bxh'); ?>">BXH</a></li>
+                <li><a href="<?= base_url('lienhe'); ?>">Liên Hệ</a></li>
+            </ul><!-- end menu -->
+        </nav><!-- end nav -->
+    </div><!-- row -->
+</div><!-- headdown -->

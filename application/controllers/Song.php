@@ -58,6 +58,9 @@ class Song extends MY_Controller
 
     public function update()
     {
+        if (!$this->user_is_login('admin')) {
+            redirect('admin_site/login/login', 'refresh');
+        }
         $id = $this->input->get('id', TRUE);
         if (!is_numeric($id)) {
             redirect('admin_site/login/login', 'refresh');
@@ -87,13 +90,20 @@ class Song extends MY_Controller
     {
         $id = $this->input->get('id', TRUE);
 
-        if (!is_numeric($id)) {
-            redirect('admin_site/login/login', 'refresh');
+        if (!$this->user_is_login('admin') || !$this->user_is_login('user') || !is_numeric($id)) {
+            redirect(base_url(), 'refresh');
         }
-
-        $this->Song_Model->delete((int)$id);
-        redirect('admin/song');
+        $song = $this->Song_Model->get_info($id);
+        if ($song->user_id == $this->currentUser()->id){
+            $this->Song_Model->delete((int)$id);
+            redirect(base_url('user_site/user/manage'));
+        }
+        if ($this->user_is_login('admin')){
+            $this->Song_Model->delete((int)$id);
+            redirect('admin/song');
+        }
     }
+
     public function listening()
     {
         $id = $this->input->get('id', TRUE);
@@ -110,5 +120,32 @@ class Song extends MY_Controller
         $data['listSong'] = $this->Song_Model->get_list(['order' => ['view_num', 'DESC'], 'limit' => [6, 0]]);
         $data['listSinger'] = ($this->array_make('id', $this->Singer_Model->get_list(), ['name', 'avatar']));
         $this->load->view('song/listening', $data);
+    }
+
+    public function list()
+    {
+        $data = [];
+
+        $data = $this->_forHeader($data);
+
+
+        $data['listSong'] = $this->Song_Model->get_list(['order' => ['view_num', 'DESC'], 'limit' => [6, 0]]);
+        $data['listSinger'] = ($this->array_make('id', $this->Singer_Model->get_list(), ['name', 'avatar']));
+        $data['listSingerValue'] = $this->Singer_Model->get_list();
+        $this->load->view('singer/list', $data);
+    }
+
+    public function bxh()
+    {
+        $data = [];
+
+        $data = $this->_forHeader($data);
+
+        $data['listSong'] = $this->Song_Model->get_list(['order' => ['view_num', 'DESC'], 'limit' => [6, 0]]);
+        $data['listSinger'] = ($this->array_make('id', $this->Singer_Model->get_list(), ['name', 'avatar']));
+        $data['listSongAlbum'] = $this->Song_Model->get_list(['order' => ['view_num', 'DESC'], 'limit' => [10, 0]]);
+        $data['title'] = 'Danh sách bài hát của bảng xếp hạng ';
+//        $this->dd($data['listSongValue']);
+        $this->load->view('song/list-song', $data);
     }
 }

@@ -40,5 +40,12 @@ class Song_Model extends MY_Model
             return $this->update($id, $data);
         }
     }
+    public function get_all_song($listId = [])
+    {
+        $this->db->where_in('id', $listId);
+        $query = $this->db->get($this->table);
+        //tra ve du lieu
+        return $query->result();
+    }
 
 }

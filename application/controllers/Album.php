@@ -147,6 +147,39 @@ class Album extends MY_Controller
             redirect('admin/album');
         }
 
+    }
+    public function list()
+    {
+        $data = [];
 
+        $data = $this->_forHeader($data);
+
+
+        $data['listSong'] = $this->Song_Model->get_list(['order' => ['view_num', 'DESC'], 'limit' => [6, 0]]);
+        $data['listSinger'] = ($this->array_make('id', $this->Singer_Model->get_list(), ['name', 'avatar']));
+        $data['listAlbum'] = $this->Album_Model->get_list();
+        $this->load->view('album/list', $data);
+    }
+    public function listSong()
+    {
+        $id = $this->input->get('id', TRUE);
+
+        if (!is_numeric($id)) {
+            redirect(base_url(), 'refresh');
+        }
+        $data = [];
+
+        $data = $this->_forHeader($data);
+
+
+        $data['listSong'] = $this->Song_Model->get_list(['order' => ['view_num', 'DESC'], 'limit' => [6, 0]]);
+        $data['listSinger'] = ($this->array_make('id', $this->Singer_Model->get_list(), ['name', 'avatar']));
+        $songListAlbum = $this->array_make('id', $this->SongList_Model->get_list(['where' => ['album_id' => $id]]), 'song_id');
+        $songListAlbum = array_values($songListAlbum);
+        $data['listSongAlbum'] = $this->Song_Model->get_all_song($songListAlbum);
+        $model = $this->Album_Model->get_info($id);
+        $data['model'] = $model;
+        $data['title'] = 'Danh sách bài hát của album '.$model->name;
+        $this->load->view('song/list-song', $data);
     }
 }

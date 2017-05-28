@@ -34,10 +34,10 @@ class Welcome extends MY_Controller
     public function index()
     {
         $data = [];
+        $data = $this->_forHeader($data);
         $data['listAlbum'] = $this->Album_Model->get_list(['order' => ['updated_at', 'DESC'], 'limit' => [3, 0]]);
         $data['listSong'] = $this->Song_Model->get_list(['order' => ['view_num', 'DESC'], 'limit' => [10, 0]]);
         $data['listSinger'] = ($this->array_make('id', $this->Singer_Model->get_list(), ['name', 'avatar']));
-//        var_dump($data['listSinger']);die();
         $this->load->view('user/master_layout', $data);
     }
 }

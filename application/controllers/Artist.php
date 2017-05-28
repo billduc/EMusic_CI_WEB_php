@@ -82,4 +82,41 @@ class Artist extends MY_Controller
         $this->Artist_Model->delete((int)$id);
         redirect('admin/artist');
     }
+    public function list()
+    {
+        $data = [];
+
+        $data = $this->_forHeader($data);
+        $this->load->model('Song_Model');
+        $this->load->model('Singer_Model');
+
+        $data['listSong'] = $this->Song_Model->get_list(['order' => ['view_num', 'DESC'], 'limit' => [6, 0]]);
+        $data['listSinger'] = ($this->array_make('id', $this->Singer_Model->get_list(), ['name', 'avatar']));
+        $data['listSingerValue'] = $this->Artist_Model->get_list();
+
+        $this->load->view('artist/list', $data);
+    }
+    public function listSong()
+    {
+        $id = $this->input->get('id', TRUE);
+
+        if (!is_numeric($id)) {
+            redirect(base_url(), 'refresh');
+        }
+        $data = [];
+
+        $data = $this->_forHeader($data);
+        $this->load->model('Song_Model');
+        $this->load->model('Singer_Model');
+
+        $data['listSong'] = $this->Song_Model->get_list(['order' => ['view_num', 'DESC'], 'limit' => [6, 0]]);
+        $data['listSinger'] = ($this->array_make('id', $this->Singer_Model->get_list(), ['name', 'avatar']));
+        $data['listSongAlbum'] = $this->Song_Model->get_list(['where' => ['artist_id' => $id]]);
+        $model = $this->Artist_Model->get_info($id);
+        $data['model'] = $model;
+        $data['title'] = 'Danh sách bài hát của nhạc sĩ '.$model->name;
+//        $this->dd($data['listSongValue']);
+        $this->load->view('song/list-song', $data);
+    }
+
 }

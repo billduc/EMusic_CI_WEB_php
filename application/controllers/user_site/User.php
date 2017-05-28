@@ -35,7 +35,7 @@ class User extends MY_Controller
 //            echo "ahii";
 //            die();
             $this->form_validation->set_message(__FUNCTION__, 'Đăng nhập không thành công');
-            return FALSE;
+            redirect(base_url(), 'refresh');//chuyen toi trang chu
         }
         return true;
     }
@@ -84,6 +84,83 @@ class User extends MY_Controller
         }
         $this->session->set_flashdata('flash_message', 'Đăng xuất thành công');
         redirect(base_url());
+    }
+    public function manage()
+    {
+        if (!$this->user_is_login('user')){
+            redirect(base_url(), 'refresh');
+        }
+        $data = [];
+
+        $data = $this->_forHeader($data);
+        $this->load->model('Singer_Model');
+        $this->load->model('Song_Model');
+        $this->load->model('Artist_Model');
+        $this->load->model('SongType_Model');
+        $data['listSinger'] = ($this->array_make('id', $this->Singer_Model->get_list(), 'name'));
+        $data['listArtist'] = ($this->array_make('id', $this->Artist_Model->get_list(), 'name'));
+        $data['listSongType'] = ($this->array_make('id', $this->SongType_Model->get_list(), 'name'));
+        $data['listSong'] = $this->Song_Model->get_list(['where' => ['user_id' => $this->currentUser()->id]]);
+        $this->load->view('user/manage', $data);
+    }
+    public function createSong()
+    {
+        if (!$this->user_is_login('user')) {
+            redirect(base_url(), 'refresh');
+        }
+        $data['title'] = 'Create a news Song';
+
+        $this->form_validation->set_rules('name', 'Name', 'required');
+
+        $data = [];
+
+        $data = $this->_forHeader($data);
+        $this->load->model('Singer_Model');
+        $this->load->model('Song_Model');
+        $this->load->model('Artist_Model');
+        $this->load->model('SongType_Model');
+        $data['listSinger'] = ($this->array_make('id', $this->Singer_Model->get_list(), 'name'));
+        $data['listArtist'] = ($this->array_make('id', $this->Artist_Model->get_list(), 'name'));
+        $data['listSongType'] = ($this->array_make('id', $this->SongType_Model->get_list(), 'name'));
+
+        if ($this->form_validation->run() === FALSE) {
+            $this->load->view('user/create_song', $data);
+        } else {
+            $this->Song_Model->set_song();
+            redirect('user_site/user/manage');
+        }
+    }
+    public function updateSong()
+    {
+        if (!$this->user_is_login('user')) {
+            redirect(base_url(), 'refresh');
+        }
+        $id = $this->input->get('id', TRUE);
+        if (!is_numeric($id)) {
+            redirect('user_site/user/manage');
+        }
+        $this->load->model('Singer_Model');
+        $this->load->model('Song_Model');
+        $this->load->model('Artist_Model');
+        $this->load->model('SongType_Model');
+
+        $this->form_validation->set_rules('name', 'Name', 'required');
+
+        $data = [];
+
+        $data = $this->_forHeader($data);
+        $data['listSinger'] = ($this->array_make('id', $this->Singer_Model->get_list(), 'name'));
+        $data['listArtist'] = ($this->array_make('id', $this->Artist_Model->get_list(), 'name'));
+        $data['listSongType'] = ($this->array_make('id', $this->SongType_Model->get_list(), 'name'));
+
+        if ($this->form_validation->run() === FALSE) {
+            $data['song'] = $this->Song_Model->get_info($id);
+            $this->load->view('user/update_song', $data);
+        } else {
+            $this->Song_Model->set_song($id);
+            redirect('user_site/user/manage');
+        }
+
     }
 
 
