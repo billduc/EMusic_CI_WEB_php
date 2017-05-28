@@ -70,9 +70,9 @@ function initHeader($k, $listSongTypeHeader)
                         <?php endforeach; ?>
                     </ul>
                 </li>
-                <li><a href="<?= base_url('album/list'); ?>">Album</a></li>
-                <li><a href="<?= base_url('singer/list'); ?>">Ca sĩ</a></li>
-                <li><a href="<?= base_url('artist/list'); ?>">Nhạc Sĩ</a></li>
+                <li><a href="<?= base_url('album/listAlbum'); ?>">Album</a></li>
+                <li><a href="<?= base_url('singer/listSinger'); ?>">Ca sĩ</a></li>
+                <li><a href="<?= base_url('artist/listArtist'); ?>">Nhạc Sĩ</a></li>
                 <li><a href="<?= base_url('song/bxh'); ?>">BXH</a></li>
                 <li><a href="<?= base_url('lienhe'); ?>">Liên Hệ</a></li>
             </ul><!-- end menu -->

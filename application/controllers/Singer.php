@@ -82,7 +82,7 @@ class Singer extends MY_Controller
         $this->Singer_Model->delete((int)$id);
         redirect('admin/listSinger');
     }
-    public function list()
+    public function listSinger()
     {
         $data = [];
 

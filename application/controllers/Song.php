@@ -122,7 +122,7 @@ class Song extends MY_Controller
         $this->load->view('song/listening', $data);
     }
 
-    public function list()
+    public function listSong()
     {
         $data = [];
 

@@ -17,7 +17,7 @@ class SongType extends MY_Controller
         $this->load->model('Song_Model');
         $this->load->model('Singer_Model');
     }
-    public function list()
+    public function listSongType()
     {
         $data = [];
 

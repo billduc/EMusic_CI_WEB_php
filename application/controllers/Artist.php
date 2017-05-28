@@ -82,7 +82,7 @@ class Artist extends MY_Controller
         $this->Artist_Model->delete((int)$id);
         redirect('admin/artist');
     }
-    public function list()
+    public function listArtist()
     {
         $data = [];
 

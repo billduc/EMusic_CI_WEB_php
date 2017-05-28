@@ -148,7 +148,7 @@ class Album extends MY_Controller
         }
 
     }
-    public function list()
+    public function listAlbum()
     {
         $data = [];
 
