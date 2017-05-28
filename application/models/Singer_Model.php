@@ -20,17 +20,14 @@ class Singer_Model extends MY_Model
         return $this->db->count_all($this->_table);
     }
 
-    public function delete($id)
-    {
-        $this->db->where('id', $id);
-        return $this->db->delete($this->_table);
-    }
 
     public function set_singer($id = false)
     {
 
         $data = $this->input->post();
-        $data['avatar'] = $this->uploadImage('avatar');
+        if (isset($_FILES['avatar']) && !empty($_FILES['avatar']['name'])){
+            $data['avatar'] = $this->uploadFile('avatar');
+        }
         if ($id === false) {
             return $this->create($data);
         } else {

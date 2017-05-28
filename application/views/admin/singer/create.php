@@ -4,7 +4,7 @@
             <?php echo validation_errors(); ?>
         </div>
 
-        <?php echo form_open_multipart('admin/singerCreate'); ?>
+        <?php echo form_open_multipart('admin/singer/create'); ?>
 
         <div class="form-group">
             <label for="formGroupExampleInput">Name</label>

@@ -14,7 +14,7 @@
 
 <div class="row bg-title">
     <div class="col-md-12">
-        <a href="singerCreate" class="btn btn-primary">Create Singer</a>
+        <a href="singer/create" class="btn btn-primary">Create Singer</a>
         <br/>
         <br/>
         <div class="table-responsive tblmanager">
@@ -70,8 +70,8 @@
                 "aTargets": [4],
                 "mData": null,
                 "mRender": function (data, type, full) {
-                    return '<a type="button" id="editCmt" action="update" class="btn btn-warning" href="'+data[0]+'">Sửa</a>' +
-                        '<a type="button" id="delCmt" action="update" class="btn btn-danger">Xóa</a>'
+                    return '<a type="button" id="editCmt" action="update" class="btn btn-warning" href="/singer/update?id='+data[0]+'">Sửa</a>' +
+                        '<a type="button" id="delCmt" action="update" class="btn btn-danger" href="/singer/delete?id='+data[0]+'">Xóa</a>'
                     // '<button type="button" id="accessPost" action="update" class="btn btn-success">Truy cập bài viết</button>'
                 }
             }

@@ -57,4 +57,12 @@ class MY_Controller extends CI_Controller {
         }
         return true;
     }
+    public function array_make($key, $data, $value)
+    {
+        $arr = [];
+        foreach ($data as $d){
+            $arr[$d->{$key}] = $d->{$value};
+        }
+        return $arr;
+    }
 }

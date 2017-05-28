@@ -212,19 +212,18 @@ class MY_Model extends CI_Model
         }
     }
 
-    function uploadImage($attr)
+    function uploadFile($attr, $type = 'gif|jpg|png')
     {
         $dirImage = uniqid();
 
         $config['upload_path'] = CDNPATH . '/uploads/' . $this->table . '/' . $dirImage;
-        $config['allowed_types'] = 'gif|jpg|png';
-        $config['max_size'] = 2048;
+        $config['allowed_types'] = $type;
+        $config['max_size'] = 20480;
 
         if (!file_exists($config['upload_path'])) {
             mkdir($config['upload_path']);
         }
         $this->load->library('upload', $config);
-
 
         if (!$this->upload->do_upload($attr)) {
             $error = array('error' => $this->upload->display_errors());
@@ -237,5 +236,26 @@ class MY_Model extends CI_Model
         return CDNPATH . '/uploads/' . $this->table . '/' . $dirImage . '/' . $this->upload->file_name;
     }
 
+    public function uploadFileMp3()
+    {
+        $tmp_name = $_FILES['file_media']['tmp_name'];
+        $name = $_FILES['file_media']['name'];
+        $type = $_FILES['file_media']['type'];
+        $size = $_FILES['file_media']['size'];
+        // Upload file
+        $dirImage = uniqid();
+
+        $config['upload_path'] = CDNPATH . '/uploads/' . $this->table . '/' . $dirImage;
+        $config['allowed_types'] = $type;
+        $config['max_size'] = 20480;
+
+        if (!file_exists($config['upload_path'])) {
+            mkdir($config['upload_path']);
+        }
+        if (move_uploaded_file($tmp_name, $config['upload_path'] . '/' . $name)){
+            return CDNPATH . '/uploads/' . $this->table . '/' . $dirImage . '/' . $name;
+        }
+        return null;
+    }
 
 }

@@ -21,57 +21,16 @@ class Admin extends MY_Controller
     public function index()
     {
         $this->load->helper('url');
-        $this->load->view('admin/index');
+        $this->load->model('Singer_Model');
+        $this->load->model('Artist_Model');
+        $this->load->model('Song_Model');
+        $data['totalSinger'] = $this->Singer_Model->get_total();
+        $data['totalArtist'] = $this->Artist_Model->get_total();
+        $data['totalSong'] = $this->Song_Model->get_total();
+        $data['content_view'] = 'admin/index';
+        $this->load->view('admin/master_layout', $data);
 
         //$this->load->view('user/register');
-    }
-
-    public function singerCreate()
-    {
-        $this->load->model('Singer_Model');
-        $data['title'] = 'Create a news singer';
-
-        $this->form_validation->set_rules('name', 'Name', 'required');
-
-        $data = array();
-        $data['content_view'] = 'admin/singer/create';
-
-        if ($this->form_validation->run() === FALSE) {
-            $this->load->view('admin/master_layout', $data);
-        } else {
-            $this->Singer_Model->set_singer();
-            redirect('admin/listSinger');
-        }
-    }
-    public function listSinger()
-    {
-        $data = [];
-        $this->load->model('Singer_Model');
-        $data['listSinger'] = $this->Singer_Model->get_list();
-        $data['content_view'] = 'admin/singer/index';
-        $data['title'] = 'Signer/List';
-//        var_dump(json_encode($data['listSinger']));
-//        die();
-        $this->load->view('admin/master_layout', $data);
-    }
-
-    public function albumCreate()
-    {
-        $data = array();
-        $data['content_view'] = 'admin/album/create';
-        $data['title'] = 'Album/Create';
-        $this->load->view('admin/master_layout', $data);
-
-    }
-
-    public function artistCreate()
-    {
-
-    }
-
-    public function songCreate()
-    {
-
     }
     public function logout()
     {
