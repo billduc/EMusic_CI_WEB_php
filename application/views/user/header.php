@@ -8,8 +8,20 @@
 
 <div class="row clearfix">
             <div class="little-head">
-                <div id="Login_PopUp_Link" class="sign-btn tbutton small"><span>Sign In</span></div>
 
+                <?php if ($this->session->userdata('user')):?>
+                    <div class="dropdown" style="float: right">
+                        <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Welcome <?=$this->session->userdata('user')->username;?>
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="<?=base_url('user_site/user/profile');?>">Profile</a></li>
+                            <li><a href="<?=base_url('user_site/user/manage');?>">Quản lý tài khoản</a></li>
+                            <li><a href="<?=base_url('user_site/user/logout');?>">Thoát</a></li>
+                        </ul>
+                    </div>
+                <?php else:?>
+                    <div id="Login_PopUp_Link" class="sign-btn tbutton small"><span>Sign In</span></div>
+                <?php endif;?>
 
 
                 <div class="search">
@@ -32,6 +44,7 @@
                         <li><a href="index.html">Trang Chủ</a></li>
                         <li><a href="index.html">Thể Loại</a>
                             <ul>
+
                                 <li><a href="#">Việt Nam</a>
                                     <ul>
                                         <li><a href="shortcode_accordion.html">Nhạc Trẻ</a></li>

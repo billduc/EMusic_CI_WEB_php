@@ -30,10 +30,7 @@
                 <div class="form-title-row">
                     <h1>Đăng Nhập Trang Quảng Trị</h1>
                 </div>
-                <?php echo validation_errors(); ?>
 
-                <div class="error" id="login_email_error"><?php echo form_error('username'); echo '<br>';?></div>
-                <div class="error" id="login_password_error"><?php echo form_error('password'); echo '<br>';?></div>
 
                 <div class="form-row">
                     <label>
@@ -48,7 +45,7 @@
                         <input type="password" name="password" id ="password">
                     </label>
                 </div>
-
+                <?php echo validation_errors(); ?>
                 <div class="form-row">
                     <div class="error" id="login_error"><?php echo form_error('login')?></div>
                     <button type="submit" name="submit">Đăng Nhập</button>
