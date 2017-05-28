@@ -40,7 +40,7 @@
                             <div class="span5"><img class="four-radius" src="<?= base_url($value->thumbnail); ?>"
                                                     alt="#"></div>
                             <div class="span7">
-                                <h3 class="news-title"><a href="album?id=<?= $value->id; ?>"><?= $value->name; ?></a>
+                                <h3 class="news-title"><a href="album/listSong?id=<?= $value->id; ?>"><?= $value->name; ?></a>
                                 </h3>
                                 <p><?= $value->description; ?></p>
                                 <div class="meta">

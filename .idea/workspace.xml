@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd2c9e64-0009-4227-8a2b-89d4d4f950f7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/album/list.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/artist/list.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/singer/list.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/song-type/list.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/song/list-song.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/user/create_song.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/user/manage.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/user/update_song.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/controllers/Song_type.php" afterPath="$PROJECT_DIR$/application/controllers/SongType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Album.php" afterPath="$PROJECT_DIR$/application/controllers/Album.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Artist.php" afterPath="$PROJECT_DIR$/application/controllers/Artist.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Singer.php" afterPath="$PROJECT_DIR$/application/controllers/Singer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Song.php" afterPath="$PROJECT_DIR$/application/controllers/Song.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Welcome.php" afterPath="$PROJECT_DIR$/application/controllers/Welcome.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/user_site/User.php" afterPath="$PROJECT_DIR$/application/controllers/user_site/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/core/MY_Controller.php" afterPath="$PROJECT_DIR$/application/core/MY_Controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Song_Model.php" afterPath="$PROJECT_DIR$/application/models/Song_Model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user/header.php" afterPath="$PROJECT_DIR$/application/views/user/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/frontend/casi.html" afterPath="$PROJECT_DIR$/resource/frontend/casi.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user/master_layout.php" afterPath="$PROJECT_DIR$/application/views/user/master_layout.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,16 +19,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="643">
               <caret line="40" column="9" lean-forward="false" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="listening.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/song/listening.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2034">
-              <caret line="117" column="69" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -83,12 +54,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/user/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="28" column="42" lean-forward="false" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+            <state relative-caret-position="378">
+              <caret line="27" column="35" lean-forward="false" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="master_layout.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/user/master_layout.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="42" column="78" lean-forward="false" selection-start-line="42" selection-start-column="78" selection-end-line="42" selection-end-column="78" />
+              <folding>
+                <marker date="1495960921377" expanded="true" signature="4242:4275" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -194,7 +177,6 @@
         <option value="$PROJECT_DIR$/application/views/admin/singer/index.php" />
         <option value="$PROJECT_DIR$/application/views/admin/artist/index.php" />
         <option value="$PROJECT_DIR$/resource/frontend/mp3.html" />
-        <option value="$PROJECT_DIR$/application/views/user/master_layout.php" />
         <option value="$PROJECT_DIR$/application/views/user/header_detail.php" />
         <option value="$PROJECT_DIR$/application/views/song/listening.php" />
         <option value="$PROJECT_DIR$/resource/frontend/css/style.css" />
@@ -220,6 +202,7 @@
         <option value="$PROJECT_DIR$/application/views/user/update_song.php" />
         <option value="$PROJECT_DIR$/application/controllers/user_site/User.php" />
         <option value="$PROJECT_DIR$/application/views/user/header.php" />
+        <option value="$PROJECT_DIR$/application/views/user/master_layout.php" />
       </list>
     </option>
   </component>
@@ -863,12 +846,12 @@
       <workItem from="1495861289381" duration="400000" />
       <workItem from="1495861799079" duration="21230000" />
       <workItem from="1495930233234" duration="17358000" />
-      <workItem from="1495950676120" duration="9943000" />
+      <workItem from="1495950676120" duration="10244000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51658000" />
+    <option name="totallyTimeSpent" value="51959000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
@@ -1064,16 +1047,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1178">
           <caret line="314" column="29" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="314" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/master_layout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="61" column="72" lean-forward="true" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="72" />
-          <folding>
-            <marker date="1495947390823" expanded="true" signature="4233:4266" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1382,9 +1355,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/user/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="28" column="42" lean-forward="false" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+        <state relative-caret-position="378">
+          <caret line="27" column="35" lean-forward="false" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/master_layout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="42" column="78" lean-forward="false" selection-start-line="42" selection-start-column="78" selection-end-line="42" selection-end-column="78" />
+          <folding>
+            <marker date="1495960921377" expanded="true" signature="4242:4275" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
