@@ -83,12 +83,11 @@
                                         <div class="span5"><img class="four-radius" style="max-width: 200px" src="<?=base_url($singer->avatar);?>" alt="#"></div>
                                         <div class="span7">
                                             <h3 class="news-title"><?=$singer->name;?></h3>
-                                            <p style="color: #7a7a7a !important;"><?=$singer->description;?></p>
+                                            <p style="color: #7a7a7a !important;"><?= (strlen($singer->description) > 100) ? mb_substr($singer->description, 0, 99) . ' ...' : $singer->description;?></p>
                                         </div><!-- span7 -->
                                     </a><!-- news -->
                                 <?php endforeach; ?>
                             </li><!-- tab content -->
-
                         </ul><!-- end tabs -->
 
                     </div><!-- def block -->
