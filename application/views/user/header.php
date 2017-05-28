@@ -5,32 +5,38 @@
 <!-- * Date: 26/05/2017-->
 <!-- * Time: 15:18-->
 <!-- */-->
+<?php
 
+;?>
 <div class="row clearfix">
-            <div class="little-head">
+    <div class="little-head">
 
-                <?php if ($this->session->userdata('user')):?>
-                    <div class="dropdown" style="float: right">
-                        <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Welcome <?=$this->session->userdata('user')->username;?>
-                            <span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                            <li><a href="<?=base_url('user_site/user/profile');?>">Profile</a></li>
-                            <li><a href="<?=base_url('user_site/user/manage');?>">Quản lý tài khoản</a></li>
-                            <li><a href="<?=base_url('user_site/user/logout');?>">Thoát</a></li>
-                        </ul>
-                    </div>
-                <?php else:?>
-                    <div id="Login_PopUp_Link" class="sign-btn tbutton small"><span>Sign In</span></div>
-                <?php endif;?>
+        <?php if ($this->session->userdata('user')): ?>
+            <div class="dropdown" style="float: right">
+                <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">
+                    Welcome <?= $this->session->userdata('user')->username; ?>
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="<?= base_url('user_site/user/profile'); ?>">Profile</a></li>
+                    <li><a href="<?= base_url('user_site/user/manage'); ?>">Quản lý tài khoản</a></li>
+                    <li><a href="<?= base_url('user_site/user/logout'); ?>">Thoát</a></li>
+                </ul>
+            </div>
+        <?php else: ?>
+            <div id="Login_PopUp_Link" class="sign-btn tbutton small"><span>Sign In</span></div>
+        <?php endif; ?>
 
 
-                <div class="search">
-                    <form action="search.html" id="search" method="get">
-                        <input id="inputhead" name="search" type="text" onfocus="if (this.value=='Start Searching...') this.value = '';" onblur="if (this.value=='') this.value = 'Start Searching...';" value="Start Searching..." placeholder="Start Searching ...">
-                        <button type="submit"><i class="icon-search"></i></button>
-                    </form><!-- end form -->
-                </div><!-- search -->
-            </div><!-- little head -->
+        <div class="search">
+            <form action="search.html" id="search" method="get">
+                <input id="inputhead" name="search" type="text"
+                       onfocus="if (this.value=='Start Searching...') this.value = '';"
+                       onblur="if (this.value=='') this.value = 'Start Searching...';" value="Start Searching..."
+                       placeholder="Start Searching ...">
+                <button type="submit"><i class="icon-search"></i></button>
+            </form><!-- end form -->
+        </div><!-- search -->
+    </div><!-- little head -->
         </div><!-- row -->
 
         <div class="headdown">
@@ -86,11 +92,11 @@
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="album.html">Album</a></li>
-                        <li><a href="casi.html">Ca sĩ</a></li>
-                        <li><a href="nhacsi.html">Nhạc Sĩ</a></li>
-                        <li><a href="baihat.html">BXH</a></li>
-                        <li><a href="lienhe.html">Liên Hệ</a></li>
+                        <li><a href="<?=base_url('album/list');?>">Album</a></li>
+                        <li><a href="<?=base_url('singer/list');?>">Ca sĩ</a></li>
+                        <li><a href="<?=base_url('artist/list');?>">Nhạc Sĩ</a></li>
+                        <li><a href="<?=base_url('bxh/list');?>">BXH</a></li>
+                        <li><a href="<?=base_url('lienhe');?>">Liên Hệ</a></li>
                     </ul><!-- end menu -->
                 </nav><!-- end nav -->
             </div><!-- row -->

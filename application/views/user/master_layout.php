@@ -72,7 +72,7 @@
                                                      src="<?= base_url($listSinger[$value->singer_id][1]); ?>"
                                                      alt="#">
                                             </a>
-                                            <h3><a href="song?id=<?= $value->id; ?>"><?=$value->name;?></a></h3>
+                                            <h3><a href="song/listening?id=<?= $value->id; ?>"><?=$value->name;?></a></h3>
                                             <span> <?=$listSinger[$value->singer_id][0];?> </span>
                                             <span> 1,892,250 Plays </span>
                                         </li>

@@ -860,6 +860,7 @@ a > .sf-sub-indicator {
 .ttw-music-player .rating {
     height: 16px;
     margin: 20px 0 20px 0;
+	display: none;
 }
 
 .ttw-music-player .rating-star {
@@ -1104,6 +1105,7 @@ div.jp-seeking-bg {
 	position: absolute;
 	right: 92px;
 	top: -15px;
+	display: none;
 }
 .ttw-music-player .rating-bar {
 	width: 13px;

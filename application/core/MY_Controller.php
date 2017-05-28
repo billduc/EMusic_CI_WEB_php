@@ -84,4 +84,22 @@ class MY_Controller extends CI_Controller
         }
         return $arr;
     }
+    function dd($var) {
+        $backtrace = debug_backtrace();
+        $fileinfo = null;
+        if (!empty($backtrace[0]) && is_array($backtrace[0])) {
+            $fileinfo = $backtrace[0]['file'] . ":" . $backtrace[0]['line'];
+        }
+        echo "Debug at: $fileinfo</br>";
+        var_dump($var);
+        die;
+    }
+    public function _forHeader($data)
+    {
+        $this->load->model('SongType_Model');
+        $this->load->model('GroupType_Model');
+        $data['listGroup'] = $this->array_make('id', $this->GroupType_Model->get_list(['order' => ['id', 'ASC']]), 'Name');
+        $data['listSongTypeHeader'] = $this->SongType_Model->get_list(['order' => ['id', 'ASC']]);
+        return $data;
+    }
 }
