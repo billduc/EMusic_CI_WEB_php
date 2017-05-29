@@ -24,7 +24,7 @@ function initHeader($k, $listSongTypeHeader)
         <?php if ($this->session->userdata('user')): ?>
             <div class="dropdown" style="float: right">
                 <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">
-                    Welcome <?= $this->session->userdata('user')->username; ?>
+                    Xin Chào <?= $this->session->userdata('user')->username; ?>
                     <span class="caret"></span></button>
                 <ul class="dropdown-menu">
                     <li><a href="<?= base_url('user_site/user/manage'); ?>">Quản lý tài khoản</a></li>
@@ -32,11 +32,11 @@ function initHeader($k, $listSongTypeHeader)
                 </ul>
             </div>
         <?php else: ?>
-            <div id="Login_PopUp_Link" class="sign-btn tbutton small"><span>Sign In</span></div>
+            <div id="Login_PopUp_Link" class="sign-btn tbutton small"><span>Đăng Nhập</span></div>
         <?php endif; ?>
 
 
-        <div class="search">
+        <div class="search" style="display: none">
             <form action="search.html" id="search" method="get">
                 <input id="inputhead" name="search" type="text"
                        onfocus="if (this.value=='Start Searching...') this.value = '';"
@@ -74,7 +74,7 @@ function initHeader($k, $listSongTypeHeader)
                 <li><a href="<?= base_url('singer/listSinger'); ?>">Ca sĩ</a></li>
                 <li><a href="<?= base_url('artist/listArtist'); ?>">Nhạc Sĩ</a></li>
                 <li><a href="<?= base_url('song/bxh'); ?>">BXH</a></li>
-                <li><a href="<?= base_url('lienhe'); ?>">Liên Hệ</a></li>
+                <li><a href="https://www.facebook.com/ducctqb" target="_blank">Liên Hệ</a></li>
             </ul><!-- end menu -->
         </nav><!-- end nav -->
     </div><!-- row -->

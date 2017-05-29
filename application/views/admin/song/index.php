@@ -14,7 +14,7 @@
 
 <div class="row bg-title">
     <div class="col-md-12">
-        <a href="song/create" class="btn btn-primary">Create Song</a>
+        <a href="song/create" class="btn btn-primary">Tạo Bài Hát</a>
         <br/>
         <br/>
         <div class="table-responsive tblmanager">

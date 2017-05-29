@@ -17,23 +17,23 @@
         <?php echo form_open_multipart('song/update?id='.$song->id); ?>
 
         <div class="form-group">
-            <label for="formGroupExampleInput">Name</label>
+            <label for="formGroupExampleInput">Tên Bài Hát</label>
             <input type="text" required class="form-control" id="formGroupExampleInput" name="name" value="<?=$song->name;?>">
         </div>
         <div class="form-group">
-            <label for="formGroupExampleInput2">Information</label>
+            <label for="formGroupExampleInput2">Thông Tin</label>
             <textarea rows="10" class="form-control" id="formGroupExampleInput2" name="description"><?=$song->description;?></textarea>
         </div>
         <div class="form-group">
-            <label for="formGroupExampleInput2">Singer</label>
+            <label for="formGroupExampleInput2">Ca Sĩ</label>
             <?= form_dropdown('singer_id', $listSinger, $song->singer_id);;?>
         </div>
         <div class="form-group">
-            <label for="formGroupExampleInput2">Artist</label>
+            <label for="formGroupExampleInput2">Nhạc Sĩ</label>
             <?= form_dropdown('artist_id', $listArtist, $song->artist_id);;?>
         </div>
         <div class="form-group">
-            <label for="formGroupExampleInput2">Song Type</label>
+            <label for="formGroupExampleInput2">Thể Loại</label>
             <?= form_dropdown(['name' => 'type_id'], $listSongType, $song->type_id);;?>
         </div>
         <div class="form-group form-upload-ava">
@@ -51,7 +51,7 @@
 
         </div>
         <div class="form-group">
-            <input type="submit" value="Update" class="btn btn-primary" />
+            <input type="submit" value="Cập Nhật" class="btn btn-primary" />
         </div>
 
         </form>

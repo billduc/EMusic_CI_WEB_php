@@ -14,7 +14,7 @@
 
 <div class="row bg-title">
     <div class="col-md-12">
-        <a href="/admin/album" class="btn btn-primary">Back Album</a>
+        <a href="/admin/album" class="btn btn-primary">Trở lại Album</a>
         <br/>
         <br/>
         <div class="table-responsive tblmanager">
@@ -123,9 +123,9 @@
                     "mData": null,
                     "mRender": function (data, type, full) {
                         if (data[1] > 0) {
-                            return '<a type="button" id="delCmt" action="update" class="btn btn-danger" href="/album/songRemove?albumId=' + idAlbum + '&idSongList=' + data[1] + '">Remove</a>'
+                            return '<a type="button" id="delCmt" action="update" class="btn btn-danger" href="/album/songRemove?albumId=' + idAlbum + '&idSongList=' + data[1] + '">Xóa</a>'
                         }
-                        return '<a type="button" id="editCmt" action="update" class="btn btn-primary" href="/album/songAdd?album_id=' + idAlbum + '&song_id=' + data[0] + '">Add</a>'
+                        return '<a type="button" id="editCmt" action="update" class="btn btn-primary" href="/album/songAdd?album_id=' + idAlbum + '&song_id=' + data[0] + '">Thêm</a>'
                         // '<button type="button" id="accessPost" action="update" class="btn btn-success">Truy cập bài viết</button>'
                     }
                 }

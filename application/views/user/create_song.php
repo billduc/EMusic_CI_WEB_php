@@ -1,9 +1,10 @@
 
 <?php
-/**
- * Created by dinhty.luu@gmail.com
- * Date: 28/05/2017
- * Time: 10:18
+/**-->
+ * Created by PhpStorm.-->
+ * User: trungduc-->
+ * Date: 26/05/2017-->
+ * Time: 15:22-->
  */ ?>
 
 <!DOCTYPE html>
@@ -84,23 +85,23 @@
                 <?php echo form_open_multipart('user_site/user/createSong'); ?>
 
                 <div class="form-group">
-                    <label for="formGroupExampleInput">Name</label>
+                    <label for="formGroupExampleInput">Tên Bài hát</label>
                     <input style="width: 75%" type="text" required class="form-control" id="formGroupExampleInput" name="name">
                 </div>
                 <div class="form-group">
-                    <label for="formGroupExampleInput2">Information</label>
+                    <label for="formGroupExampleInput2">Thông Tin</label>
                     <textarea style="width: 75%" rows="10" class="form-control" id="formGroupExampleInput2" name="description"></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="formGroupExampleInput2">Singer</label>
+                    <label for="formGroupExampleInput2">Ca Sĩ</label>
                     <?= form_dropdown('singer_id', $listSinger);;?>
                 </div>
                 <div class="form-group">
-                    <label for="formGroupExampleInput2">Artist</label>
+                    <label for="formGroupExampleInput2">Nhạc Sĩ</label>
                     <?= form_dropdown('artist_id', $listArtist);;?>
                 </div>
                 <div class="form-group">
-                    <label for="formGroupExampleInput2">Song Type</label>
+                    <label for="formGroupExampleInput2">Thể Loại</label>
                     <?= form_dropdown(['name' => 'type_id'], $listSongType);;?>
                 </div>
                 <div class="form-group form-upload-ava">
@@ -116,7 +117,7 @@
 
                 </div>
                 <div class="form-group" style="margin-top: 45px">
-                    <input type="submit" value="Create news" class="btn btn-primary" />
+                    <input type="submit" value="Tạo Bài Hát" class="btn btn-primary" />
                 </div>
 
                 </form>

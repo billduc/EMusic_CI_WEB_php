@@ -64,7 +64,7 @@
     </header><!-- end header -->
 
     <div class="under_header">
-        <!--<img src="images/assets/breadcrumbs2.png" alt="#">-->
+        <img src="<?=base_url('resource/frontend/images/assets/breadcrumbs10.png');?>" alt="#">
     </div><!-- under header -->
 
     <div class="page-content back_to_up">
@@ -138,7 +138,7 @@
                                                     <a href="<?= base_url('song/listening?id=' . $value->id); ?>"><?= $value->name; ?></a>
                                                 </h3>
                                                 <span> <?= $listSinger[$value->singer_id][0]; ?> </span>
-                                                <span> 1,892,250 Plays </span>
+                                                <span> <?= $value->view_num; ?> Lượt nghe </span>
                                             </li>
                                         <?php endforeach; ?>
                                     </ul>

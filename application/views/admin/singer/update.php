@@ -1,10 +1,9 @@
-<?php
-/**
- * Created by dinhty.luu@gmail.com
- * Date: 24/05/2017
- * Time: 17:06
- */
-?>
+<?php /**
+ * Created by PhpStorm.
+ * User: trungduc
+ * Date: 26/05/2017
+ * Time: 03:27
+ */ ?>
 <div class="row bg-title">
     <div class="col-md-12">
         <div class="help-block" style="color: red">
@@ -14,11 +13,11 @@
         <?php echo form_open_multipart('singer/update?id=' . $singer->id); ?>
 
         <div class="form-group">
-            <label for="formGroupExampleInput">Name</label>
+            <label for="formGroupExampleInput">Tên Ca Sĩ</label>
             <input type="text" required class="form-control" id="formGroupExampleInput" name="name" value="<?=$singer->name;?>">
         </div>
         <div class="form-group">
-            <label for="formGroupExampleInput2">Information</label>
+            <label for="formGroupExampleInput2">Thông Tin</label>
             <textarea rows="10" class="form-control" id="formGroupExampleInput2" name="description"><?=$singer->description;?></textarea>
         </div>
         <div class="form-group form-upload-ava">
@@ -41,7 +40,7 @@
 
         </div>
         <div class="form-group">
-            <input type="submit" value="Update" class="btn btn-primary"/>
+            <input type="submit" value="Cập Nhật" class="btn btn-primary"/>
         </div>
 
         </form>

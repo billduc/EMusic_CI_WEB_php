@@ -7,11 +7,11 @@
         <?php echo form_open_multipart('admin/singer/create'); ?>
 
         <div class="form-group">
-            <label for="formGroupExampleInput">Name</label>
+            <label for="formGroupExampleInput">Tên Ca Sĩ</label>
             <input type="text" required class="form-control" id="formGroupExampleInput" name="name">
         </div>
         <div class="form-group">
-            <label for="formGroupExampleInput2">Information</label>
+            <label for="formGroupExampleInput2">Thông Tin</label>
             <textarea rows="10" class="form-control" id="formGroupExampleInput2" name="description"></textarea>
         </div>
         <div class="form-group form-upload-ava">
@@ -33,7 +33,7 @@
 
         </div>
         <div class="form-group">
-            <input type="submit" value="Create news" class="btn btn-primary" />
+            <input type="submit" value="Tạo Ca Sĩ" class="btn btn-primary" />
         </div>
 
         </form>

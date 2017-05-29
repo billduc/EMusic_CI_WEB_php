@@ -1,8 +1,9 @@
 <?php
-/**
- * Created by dinhty.luu@gmail.com
- * Date: 28/05/2017
- * Time: 10:18
+/**-->
+ * Created by PhpStorm.-->
+ * User: trungduc-->
+ * Date: 26/05/2017-->
+ * Time: 15:22-->
  */ ?>
 
 <!DOCTYPE html>
@@ -113,7 +114,7 @@
                                                     <a href="<?= base_url('song/listening?id=' . $value->id); ?>"><?= $value->name; ?></a>
                                                 </h3>
                                                 <span> <?= $listSinger[$value->singer_id][0]; ?> </span>
-                                                <span> <?= $value->view_num; ?> Plays </span>
+                                                <span> <?= $value->view_num; ?> Lượt nghe </span>
                                             </li>
                                         <?php endforeach; ?>
                                     </ul>

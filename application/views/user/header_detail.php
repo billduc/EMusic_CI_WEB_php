@@ -1,12 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: trungduc
- * Date: 26/05/2017
- * Time: 16:33
- */
-
-?>
+/**-->
+ * Created by PhpStorm.-->
+ * User: trungduc-->
+ * Date: 26/05/2017-->
+ * Time: 15:22-->
+ */ ?>
 <header id="header" class="glue">
     <div class="row clearfix">
         <div class="little-head">
@@ -16,13 +14,13 @@
                     <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Welcome <?=$this->session->userdata('user')->username;?>
                         <span class="caret"></span></button>
                     <ul class="dropdown-menu">
-                        <li><a href="<?=base_url('user_site/user/profile');?>">Profile</a></li>
+
                         <li><a href="<?=base_url('user_site/user/manage');?>">Quản lý tài khoản</a></li>
                         <li><a href="<?=base_url('user_site/user/logout');?>">Thoát</a></li>
                     </ul>
                 </div>
             <?php else:?>
-                <div id="Login_PopUp_Link" class="sign-btn tbutton small"><span>Sign In</span></div>
+                <div id="Login_PopUp_Link" class="sign-btn tbutton small"><span>Đăng Nhập</span></div>
             <?php endif;?>
 
 

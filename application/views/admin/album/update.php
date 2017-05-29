@@ -17,11 +17,11 @@
         <?php echo form_open_multipart('album/update?id=' . $album->id); ?>
 
         <div class="form-group">
-            <label for="formGroupExampleInput">Name</label>
+            <label for="formGroupExampleInput">Tên Album</label>
             <input type="text" required class="form-control" id="formGroupExampleInput" name="name" value="<?=$album->name;?>">
         </div>
         <div class="form-group">
-            <label for="formGroupExampleInput2">Information</label>
+            <label for="formGroupExampleInput2">Thông Tin</label>
             <textarea rows="10" class="form-control" id="formGroupExampleInput2" name="description"><?=$album->description;?></textarea>
         </div>
         <div class="form-group form-upload-ava">
@@ -44,7 +44,7 @@
 
         </div>
         <div class="form-group">
-            <input type="submit" value="Update" class="btn btn-primary"/>
+            <input type="submit" value="Cập Nhật" class="btn btn-primary"/>
         </div>
 
         </form>

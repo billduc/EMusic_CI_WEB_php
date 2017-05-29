@@ -34,7 +34,7 @@
         <div class="row row-fluid clearfix mbf">
             <div class="span8">
                 <div class="def-block">
-                    <h4> Latest News </h4><span class="liner"></span>
+                    <h4> Album Mới Nhất </h4><span class="liner"></span>
                     <?php foreach ($listAlbum as $value): ?>
                         <div class="news row-fluid animtt" data-gen="fadeUp" style="opacity:0;">
                             <div class="span5"><img class="four-radius" src="<?= base_url($value->thumbnail); ?>"
@@ -45,8 +45,7 @@
                                 <p><?= $value->description; ?></p>
                                 <div class="meta">
                                     <span> <i class="icon-time mi"></i><?= date('Y-m-d H:m', strtotime($value->updated_at)); ?> </span>
-                                    | <span> <a href="#"><i
-                                                    class="icon-comments-alt"></i></a><?= ' ' . rand(10, 100); ?></span>
+
                                 </div><!-- meta -->
                                 <!--                                <a href="news_single.html" class="sign-btn tbutton small"><span>Read More</span></a>-->
                             </div><!-- span7 -->
@@ -74,7 +73,7 @@
                                             </a>
                                             <h3><a href="song/listening?id=<?= $value->id; ?>"><?=$value->name;?></a></h3>
                                             <span> <?=$listSinger[$value->singer_id][0];?> </span>
-                                            <span> 1,892,250 Plays </span>
+                                            <span> <?= $value->view_num; ?> Lượt Nghe </span>
                                         </li>
                                     <?php endforeach; ?>
                                 </ul>

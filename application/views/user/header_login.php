@@ -30,51 +30,19 @@
         <nav>
             <ul class="sf-menu">
                 <li><a href="index.html">Trang Chủ</a></li>
-                <li><a href="index.html">Thể Loại</a>
+                <li><a href="#">Thể Loại</a>
                     <ul>
-                        <li><a href="#">Việt Nam</a>
-                            <ul>
-                                <li><a href="shortcode_accordion.html">Nhạc Trẻ</a></li>
-                                <li><a href="shortcode_buttons.html">Trữ Tình</a></li>
-                                <li><a href="shortcode_tables.html">Remix Việt</a></li>
-                                <li><a href="shortcode_lightbox.html">Rap Việt</a></li>
-                                <li><a href="shortcode_googlemap.html">Tiền Chiến</a></li>
-                                <li><a href="shortcode_video.html">Nhạc Trịnh</a></li>
-                                <li><a href="shortcode_social_icons.html">Thiếu Nhi</a></li>
-                                <li><a href="shortcode_tab.html">Rock Việt</a></li>
-                                <li><a href="shortcode_toggle.html">Cách Mạnh</a></li>
-
-                            </ul>
-                        </li>
-                        <li><a href="shop.html">Âu Mỹ</a>
-                            <ul>
-                                <li><a href="shop.html">Pop</a></li>
-                                <li><a href="shop_product.html">Rock</a></li>
-                                <li><a href="shop_cart.html">Electronica/Dance</a></li>
-                                <li><a href="shop_checkout.html">R&B/Hhip Hop/Rap</a></li>
-                                <li><a href="shop_cart.html">Blue/Jazz</a></li>
-                                <li><a href="shop_cart.html">Country</a></li>
-                                <li><a href="shop_cart.html">Latin</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="shop.html">Châu Á</a>
-                            <ul>
-                                <li><a href="shop_cart.html">Nhạc Hàn</a></li>
-                                <li><a href="shop_cart.html">Nhạc Hoa</a></li>
-                                <li><a href="shop_cart.html">Nhạc Nhật</a></li>
-                                <li><a href="shop_cart.html">Nhạc Thái</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="shop.html">Khác</a>
-                            <ul>
-                                <li><a href="shop_cart.html">Không Lời</a></li>
-                                <li><a href="shop_cart.html">Nhạc Phim</a></li>
-                                <li><a href="shop_cart.html">Thể Loại Khác</a></li>
-
-                            </ul>
-                        </li>
+                        <?php foreach ($listGroup as $key => $group): ?>
+                            <li>
+                                <a href="#"><?= $group; ?></a>
+                                <ul>
+                                    <?= initHeader($key, $listSongTypeHeader); ?>
+                                </ul>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
                 </li>
+
                 <li><a href="album.html">Album</a></li>
                 <li><a href="casi.html">Ca sĩ</a></li>
                 <li><a href="nhacsi.html">Nhạc Sĩ</a></li>

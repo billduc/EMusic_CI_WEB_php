@@ -14,7 +14,7 @@
 
 <div class="row bg-title">
     <div class="col-md-12">
-        <a href="album/create" class="btn btn-primary">Create Album</a>
+        <a href="album/create" class="btn btn-primary">Tạo Album</a>
         <br/>
         <br/>
         <div class="table-responsive tblmanager">

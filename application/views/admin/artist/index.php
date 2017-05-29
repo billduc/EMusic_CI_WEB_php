@@ -14,7 +14,7 @@
 
 <div class="row bg-title">
     <div class="col-md-12">
-        <a href="artist/create" class="btn btn-primary">Create Artist</a>
+        <a href="artist/create" class="btn btn-primary">Tạo Nhạc Sĩ</a>
         <br/>
         <br/>
         <div class="table-responsive tblmanager">

@@ -1,10 +1,9 @@
-<?php
-/**
- * Created by dinhty.luu@gmail.com
- * Date: 24/05/2017
- * Time: 15:42
- */
-?>
+<?php /**
+* Created by PhpStorm.
+* User: trungduc
+* Date: 26/05/2017
+* Time: 03:27
+*/ ?>
 
 <!DOCTYPE html>
 <html lang="en">

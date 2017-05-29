@@ -1,8 +1,9 @@
 <?php
-/**
- * Created by dinhty.luu@gmail.com
- * Date: 28/05/2017
- * Time: 10:18
+/**-->
+ * Created by PhpStorm.-->
+ * User: trungduc-->
+ * Date: 26/05/2017-->
+ * Time: 15:22-->
  */ ?>
 
 <!DOCTYPE html>
@@ -78,7 +79,7 @@
 
             <div class="row bg-title">
                 <div class="col-md-12">
-                    <a href="createSong" class="btn btn-primary">Create Song</a>
+                    <a href="createSong" class="btn btn-primary">Tạo Bài hát</a>
                     <br/>
                     <br/>
                     <div class="table-responsive tblmanager">

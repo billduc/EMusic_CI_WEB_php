@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Registration Form</title>
+    <title>Đăng Ký</title>
 
     <link rel="stylesheet" href="<?= base_url('resource/frontend/css');?>/demo.css">
     <link rel="stylesheet" href="<?= base_url('resource/frontend/css');?>/form-register.css">

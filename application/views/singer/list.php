@@ -113,7 +113,7 @@
                                                     <a href="<?= base_url('song/listening?id=' . $value->id); ?>"><?= $value->name; ?></a>
                                                 </h3>
                                                 <span> <?= $listSinger[$value->singer_id][0]; ?> </span>
-                                                <span> <?= $value->view_num; ?> Plays </span>
+                                                <span> <?= $value->view_num; ?> Lượt nghe </span>
                                             </li>
                                         <?php endforeach; ?>
                                     </ul>

@@ -1,9 +1,8 @@
-<?php
-
-/**
- * Created by dinhty.luu@gmail.com
- * Date: 28/05/2017
- * Time: 08:46
+<?php /**
+ * Created by PhpStorm.
+ * User: trungduc
+ * Date: 26/05/2017
+ * Time: 03:27
  */
 class SongList_Model extends MY_Model
 {

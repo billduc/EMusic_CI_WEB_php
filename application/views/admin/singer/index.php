@@ -1,20 +1,15 @@
-<?php
-/**
- * Created by dinhty.luu@gmail.com
- * Date: 24/05/2017
- * Time: 17:06
- */
-
-/**
- * @var $listSinger array
- */
-?>
+<?php /**
+ * Created by PhpStorm.
+ * User: trungduc
+ * Date: 26/05/2017
+ * Time: 03:27
+ */ ?>
 <link href="<?= base_url('resource/backend/html/dataTable/css/jquery.dataTables.min.css'); ?>" rel="stylesheet">
 <link href="<?= base_url('resource/backend/html/dataTable/css/dataTables.bootstrap.css'); ?>" rel="stylesheet">
 
 <div class="row bg-title">
     <div class="col-md-12">
-        <a href="singer/create" class="btn btn-primary">Create Singer</a>
+        <a href="singer/create" class="btn btn-primary">Tạo Ca Sĩ</a>
         <br/>
         <br/>
         <div class="table-responsive tblmanager">

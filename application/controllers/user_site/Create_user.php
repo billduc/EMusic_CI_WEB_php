@@ -43,7 +43,7 @@ class Create_user extends MY_Controller
             if( $this->User_Model->create($data) )
             {
                 $this->session->set_flashdata('flash_message', 'Dang ky thanh vien thanh cong');
-                redirect('home/index', 'refresh');//chuyen toi trang chu
+                redirect(base_url(), 'refresh');//chuyen toi trang chu
                 echo 'thanh cong';
                 die();
             }
